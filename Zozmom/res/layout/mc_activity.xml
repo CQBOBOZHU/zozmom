@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/stat_bar_white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <include layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:id="@+id/huodong_lay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y41"
+                android:onClick="onClick"
+                android:background="@drawable/item_selector" >
+
+                <TextView
+                    android:id="@+id/center_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/im1"
+                    android:layout_width="@dimen/y15"
+                    android:layout_height="@dimen/y15"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/y8"
+                    android:src="@drawable/message" />
+
+                <TextView
+                    android:id="@+id/te1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/center_line"
+                    android:layout_marginBottom="@dimen/y1"
+                    android:layout_marginLeft="@dimen/x14"
+                    android:layout_toRightOf="@+id/im1"
+                    android:text="活动消息"
+                    android:textColor="@color/login_edittext_color"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/center_line"
+                    android:layout_marginLeft="@dimen/x14"
+                    android:layout_marginTop="@dimen/y1"
+                    android:layout_toRightOf="@+id/im1"
+                    android:text="消息标题"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x12"
+                    android:background="@drawable/forward" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:id="@+id/zhongjiang_lay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y41"
+                 android:onClick="onClick"
+                android:background="@drawable/item_selector" >
+
+                <TextView
+                    android:id="@+id/center_line2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/im2"
+                    android:layout_width="@dimen/y15"
+                    android:layout_height="@dimen/y15"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/y8"
+                    android:src="@drawable/jiang" />
+
+                <TextView
+                    android:id="@+id/te2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/center_line2"
+                    android:layout_marginBottom="@dimen/y1"
+                    android:layout_marginLeft="@dimen/x14"
+                    android:layout_toRightOf="@+id/im2"
+                    android:text="中奖消息"
+                    android:textColor="@color/login_edittext_color"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/center_line2"
+                    android:layout_marginLeft="@dimen/x14"
+                    android:layout_marginTop="@dimen/y1"
+                    android:layout_toRightOf="@+id/im2"
+                    android:text="消息标题"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x12"
+                    android:background="@drawable/forward" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:id="@+id/wuliu_lay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y41"
+                 android:onClick="onClick"
+                android:background="@drawable/item_selector" >
+
+                <TextView
+                    android:id="@+id/center_line3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/im3"
+                    android:layout_width="@dimen/y15"
+                    android:layout_height="@dimen/y15"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/y8"
+                    android:src="@drawable/car" />
+
+                <TextView
+                    android:id="@+id/te3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/center_line3"
+                    android:layout_marginBottom="@dimen/y1"
+                    android:layout_marginLeft="@dimen/x14"
+                    android:layout_toRightOf="@+id/im3"
+                    android:text="物流消息"
+                    android:textColor="@color/login_edittext_color"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/center_line3"
+                    android:layout_marginLeft="@dimen/x14"
+                    android:layout_marginTop="@dimen/y1"
+                    android:layout_toRightOf="@+id/im3"
+                    android:text="消息标题"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x12"
+                    android:background="@drawable/forward" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:id="@+id/sys_lay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y41"
+                 android:onClick="onClick"
+                android:background="@drawable/item_selector" >
+
+                <TextView
+                    android:id="@+id/center_line4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/im4"
+                    android:layout_width="@dimen/y15"
+                    android:layout_height="@dimen/y15"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/y8"
+                    android:src="@drawable/gonggao" />
+
+                <TextView
+                    android:id="@+id/te4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/center_line4"
+                    android:layout_marginBottom="@dimen/y1"
+                    android:layout_marginLeft="@dimen/x14"
+                    android:layout_toRightOf="@+id/im4"
+                    android:text="系统公告"
+                    android:textColor="@color/login_edittext_color"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/center_line4"
+                    android:layout_marginLeft="@dimen/x14"
+                    android:layout_marginTop="@dimen/y1"
+                    android:layout_toRightOf="@+id/im4"
+                    android:text="消息标题"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x12"
+                    android:background="@drawable/forward" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

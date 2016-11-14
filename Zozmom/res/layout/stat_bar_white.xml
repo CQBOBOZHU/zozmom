@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y28"
+    android:background="@color/white"
+    android:splitMotionEvents="false" >
+
+    <ImageButton
+        android:id="@+id/status_bar_Exit"
+        android:layout_width="@dimen/x35"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x4"
+        android:background="@null"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:src="@drawable/back_black" />
+
+    <TextView
+        android:id="@+id/status_bar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="添加地址"
+        android:textColor="@color/title_black"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/status_bar_addbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/x8"
+        android:background="@null"
+        android:onClick="onClick"
+        android:text="新增"
+        android:textColor="@color/good_message_textcolors"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 首页 -->
+    <dimen name="sizetwo">12sp</dimen>
+    <dimen name="sizethree">13sp</dimen>
+    <dimen name="sizefour">14sp</dimen>
+    <dimen name="sizefive">15sp</dimen>
+    <dimen name="sizesix">16sp</dimen>
+    <dimen name="sizeseven">17sp</dimen>
+    <dimen name="sizeeight">18sp</dimen>
+</resources>

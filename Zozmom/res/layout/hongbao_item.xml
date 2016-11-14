@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_selector"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/y6"
+    android:paddingTop="@dimen/y6" >
+
+    <LinearLayout
+        android:id="@+id/hongbao_item_lay"
+        android:layout_width="@dimen/x55"
+        android:layout_height="@dimen/y26"
+        android:layout_marginLeft="@dimen/x12"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="38"
+            android:background="@color/hongbao_bg2"
+            android:gravity="center"
+            android:text="现金红包"
+            android:textColor="@color/hongbao_text"
+            android:textSize="@dimen/sizetwo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"
+            android:background="@color/hongbao_bg1"
+            android:gravity="center"
+            android:textColor="@color/hongbao_text"
+            android:textSize="@dimen/sizesix" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"
+            android:background="@color/hongbao_bg2"
+            android:gravity="center"
+            android:textColor="@color/hongbao_text"
+            android:textSize="@dimen/sizetwo" />
+
+        <TextView
+            android:id="@+id/hongb_priceview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="46"
+            android:background="@color/hongbao_bg1"
+            android:gravity="center"
+            android:text="5元"
+            android:textColor="@color/hongbao_text"
+            android:textSize="@dimen/sizesix" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/hongbao_item_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/hongbao_item_lay"
+        android:layout_marginLeft="@dimen/x7"
+        android:layout_toLeftOf="@+id/hongbao_item_btn"
+        android:layout_toRightOf="@+id/hongbao_item_lay"
+        android:lines="1"
+        android:textColor="@color/good_message_textcolors"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/hongbao_item_textview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/hongbao_item_lay"
+        android:layout_marginLeft="@dimen/x7"
+        android:layout_toLeftOf="@+id/hongbao_item_btn"
+        android:layout_toRightOf="@+id/hongbao_item_lay"
+        android:lines="1"
+        android:textColor="@color/good_message_textcolors"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/hongbao_item_btn"
+        android:layout_width="@dimen/x60"
+        android:layout_height="@dimen/y17"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/x12"
+        android:background="@drawable/btn_background_yellow"
+        android:focusable="false"
+        android:text="立即使用"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sizefour"
+         />
+
+    <ImageView
+        android:contentDescription="@string/app_name"
+        android:layout_width="@dimen/x25"
+        android:layout_height="@dimen/x25"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:layout_marginRight="@dimen/x12"
+        android:background="@drawable/check_btn" />
+
+</RelativeLayout>

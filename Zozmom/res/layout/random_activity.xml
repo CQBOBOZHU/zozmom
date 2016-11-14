@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/status_bar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x12"
+        android:layout_marginRight="@dimen/x12"
+        android:layout_marginTop="@dimen/y8"
+        android:text="用户随机数"
+        android:textColor="@color/index_btn"
+        android:textSize="@dimen/sizesix"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x12"
+        android:layout_marginRight="@dimen/x12"
+        android:text="用户选择的随机数将决定最终的逐梦结果。在商品满足揭晓条件时，取该商品最后一条购买时间前用户选择的50条随机数之和作为逐梦结果的一部分。"
+        android:textSize="@dimen/sizethree" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x12"
+        android:layout_marginRight="@dimen/x12"
+        android:layout_marginTop="@dimen/y10"
+        android:text="开奖算法"
+        android:textColor="@color/index_btn"
+        android:textSize="@dimen/sizesix"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x12"
+        android:layout_marginRight="@dimen/x12"
+        android:text="数值A：截止到该商品满足揭晓条件全站前50条按时、分、秒、毫秒生成的时间之和（如20:15:25:362则为2015253652）"
+        android:textSize="@dimen/sizethree" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x12"
+        android:layout_marginRight="@dimen/x12"
+        android:text="数值B：截止到该商品满足揭晓条件全站前50名用户选择的随机数之和逐梦结果=数值A+数值B除以商品总参与人次取余数+10000001"
+        android:textSize="@dimen/sizethree" />
+
+</LinearLayout>

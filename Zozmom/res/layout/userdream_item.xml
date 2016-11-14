@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/item_selector"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/y6" >
+
+        <ImageView
+            android:id="@+id/sumit_picimageview"
+            android:layout_width="@dimen/y53"
+            android:layout_height="@dimen/y53"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_marginTop="@dimen/y6"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pic_loading" />
+
+        <ImageView
+            android:id="@+id/isuser_cometrue_image"
+            android:layout_width="@dimen/y23"
+            android:layout_height="@dimen/y23"
+            android:layout_marginLeft="@dimen/x6"
+            android:layout_marginTop="@dimen/y2"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/come_true_red"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/user_cometrue_disimage"
+            android:layout_width="@dimen/y23"
+            android:layout_height="@dimen/y23"
+            android:layout_alignLeft="@+id/sumit_picimageview"
+            android:layout_alignTop="@+id/sumit_picimageview"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ten_yuan"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/sumit_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_marginRight="@dimen/x12"
+            android:layout_marginTop="@dimen/x13"
+            android:layout_toRightOf="@+id/sumit_picimageview"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:minLines="2"
+            android:textColor="@color/index_btn"
+            android:textSize="@dimen/sizefour" />
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sumit_name_tv"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_marginTop="@dimen/y4"
+            android:layout_toRightOf="@+id/sumit_picimageview"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:lines="1"
+                android:text="期号:"
+                android:textColor="@color/grid_text_color"
+                android:textSize="@dimen/sizetwo" />
+
+            <TextView
+                android:id="@+id/userdream_value_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/x4"
+                android:gravity="center"
+                android:lines="1"
+                android:textColor="@color/background"
+                android:textSize="@dimen/sizetwo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:lines="1"
+                android:text="期"
+                android:textColor="@color/grid_text_color"
+                android:textSize="@dimen/sizetwo" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/need_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout1"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_marginTop="@dimen/y4"
+            android:layout_toRightOf="@+id/sumit_picimageview"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="@color/grid_text_color"
+            android:textSize="@dimen/sizetwo" />
+
+        <Button
+            android:id="@+id/user_getdreambtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/layout1"
+            android:layout_marginRight="@dimen/x12"
+            android:layout_marginTop="@dimen/y4"
+            android:background="@null"
+            android:drawablePadding="@dimen/x7"
+            android:drawableRight="@drawable/take_on"
+            android:focusable="false"
+            android:text="查看号码"
+            android:textColor="@color/grid_text_color"
+            android:textSize="@dimen/sizetwo" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/goodmessage_rlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/x12"
+        android:layout_marginRight="@dimen/x12"
+        android:background="@drawable/list_item"
+        android:paddingBottom="@dimen/y6"
+        android:visibility="gone" >
+
+        <com.zozmom.cuview.CuGridView
+            android:id="@+id/userdream_item_gridview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_marginRight="@dimen/x12"
+            android:layout_marginTop="@dimen/y8"
+            android:clickable="false"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="3"
+            android:verticalSpacing="@dimen/y8" />
+
+        <Button
+            android:id="@+id/lucknum_before_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/userdream_item_gridview"
+            android:layout_below="@+id/userdream_item_gridview"
+            android:layout_marginLeft="@dimen/x25"
+            android:layout_marginTop="@dimen/y9"
+            android:background="@drawable/item_selector"
+            android:onClick="onClick"
+            android:text="上一页"
+            android:textColor="@color/before_btncolor"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/lucknum_after_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/userdream_item_gridview"
+            android:layout_below="@+id/userdream_item_gridview"
+            android:layout_marginRight="@dimen/x25"
+            android:layout_marginTop="@dimen/y9"
+            android:background="@drawable/item_selector"
+            android:onClick="onClick"
+            android:text="下一页"
+            android:textColor="@color/before_btncolor"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/going_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y5" >
+
+        <ProgressBar
+            android:id="@+id/userdream_item_bar"
+            style="@style/mProgress_horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/y5"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/y3"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_marginRight="@dimen/x12"
+            android:layout_marginTop="@dimen/y4"
+            android:layout_toLeftOf="@+id/userdream_item_gmviewbtn"
+            android:max="100"
+            android:progress="60"
+            android:progressDrawable="@drawable/progressbar" />
+
+        <TextView
+            android:id="@+id/userdream_item_priceview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/userdream_item_bar"
+            android:layout_below="@+id/userdream_item_bar"
+            android:lines="1"
+            android:text="总需人次"
+            android:textColor="@color/grid_text_color"
+            android:textSize="@dimen/sizetwo" />
+
+        <TextView
+            android:id="@+id/userdream_item_syview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/userdream_item_bar"
+            android:layout_below="@+id/userdream_item_bar"
+            android:lines="1"
+            android:text="剩余人次"
+            android:textColor="@color/grid_text_color"
+            android:textSize="@dimen/sizetwo" />
+
+        <Button
+            android:id="@+id/userdream_item_gmviewbtn"
+            android:layout_width="@dimen/x68"
+            android:layout_height="@dimen/y18"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x12"
+            android:background="@drawable/btn_background_yellow"
+            android:focusable="false"
+            android:text="追加购买"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizefour" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/finish_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y5"
+        android:layout_marginTop="@dimen/x11"
+        android:gravity="clip_vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/userdream_item_getedusernameview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x12"
+            android:lines="1"
+            android:textColor="@color/grid_text_color"
+            android:textSize="@dimen/sizefour" />
+
+        <Button
+            android:id="@+id/userdream_item_buyagainbtn"
+            android:layout_width="@dimen/x68"
+            android:layout_height="@dimen/y18"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x12"
+            android:background="@drawable/btn_background_yellow"
+            android:focusable="false"
+            android:text="再次购买"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizefour" />
+    </RelativeLayout>
+
+</LinearLayout>

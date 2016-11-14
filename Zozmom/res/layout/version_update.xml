@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="@dimen/x280"
+        android:layout_height="@dimen/x280"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/new_version" />
+
+    <TextView
+        android:layout_width="@dimen/x280"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="@dimen/y9"
+        android:paddingLeft="@dimen/x18"
+        android:paddingBottom="@dimen/y9"
+        android:text="新版本特性:\n 1,增加了聊天功能 \n 2,增加了直播功能 \n 3,增加了人脸识别功能"
+        android:textColor="@color/index_btn"
+        android:textSize="@dimen/sizeeight" />
+
+    <LinearLayout
+        android:layout_width="@dimen/x280"
+        android:layout_height="@dimen/y21"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_selector"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/sizesix"
+            android:text="确定" />
+
+        <Button
+              android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/item_selector"
+              android:textSize="@dimen/sizesix"
+            android:text="忽略" />
+    </LinearLayout>
+
+</LinearLayout>

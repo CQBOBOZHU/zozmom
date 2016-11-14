@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/stat_bar_white" />
+
+    <include layout="@layout/line_h" />
+     <include
+        android:id="@+id/notloginview"
+        android:visibility="gone"
+        layout="@layout/warn_user_login" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y25"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/hongbao_canuserbtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@null"
+            android:onClick="onClick"
+            android:text="@string/can_user_hongbao"
+            android:textColor="@color/background"
+            android:textSize="@dimen/sizesix" />
+
+        <Button
+            android:id="@+id/hongbao_usedbtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@null"
+            android:onClick="onClick"
+            android:text="@string/used_hongbao"
+            android:textColor="@color/index_btn"
+            android:textSize="@dimen/sizesix" />
+    </LinearLayout>
+
+    <include layout="@layout/line_h" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/hongbao_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>

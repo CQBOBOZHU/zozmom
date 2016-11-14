@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/status_bar"
+        layout="@layout/status_bar" />
+
+     <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/sumit_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/line_h"
+        android:layout_below="@+id/status_bar"
+        android:scrollbars="none" > 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/y3"
+                android:paddingTop="@dimen/y3" >
+
+                <FrameLayout
+                    android:id="@+id/sp_fl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x5" >
+
+                    <ImageView
+                        android:id="@+id/sumit_picimageview"
+                        android:layout_width="@dimen/y60"
+                        android:layout_height="@dimen/y60"
+                         android:scaleType="centerCrop"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/pic_loading" />
+
+                    <ImageView
+                        android:id="@+id/sumit_disimageview"
+                        android:layout_width="@dimen/y20"
+                        android:layout_height="@dimen/y20"
+                        android:background="@drawable/ten_yuan"
+                        android:visibility="gone"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="@string/app_name" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/sumit_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginRight="@dimen/x12"
+                    android:layout_toRightOf="@+id/sp_fl"
+                    android:ellipsize="end"
+                      android:layout_marginTop="@dimen/y2"
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:textColor="@color/index_btn"
+                    android:textSize="@dimen/sizefour" />
+
+                <LinearLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sumit_name_tv"
+                    android:layout_marginTop="@dimen/y3"
+                    android:layout_toRightOf="@+id/sp_fl"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x5"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:text="@string/pay_acount"
+                        android:textColor="@color/grid_text_color"
+                        android:textSize="@dimen/sizetwo" />
+
+                    <TextView
+                        android:id="@+id/gallery_value_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:textColor="@color/background"
+                        android:textSize="@dimen/sizetwo" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/need_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/need_textviewhint"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginTop="@dimen/y3"
+                    android:layout_toRightOf="@+id/need_textviewhint"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:textColor="@color/grid_text_color"
+                    android:textSize="@dimen/sizetwo" />
+
+                <TextView
+                    android:id="@+id/need_textviewhint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout1"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginTop="@dimen/y3"
+                    android:layout_toRightOf="@+id/sp_fl"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="@string/good_allconut"
+                    android:textColor="@color/grid_text_color"
+                    android:textSize="@dimen/sizetwo" />
+
+                <TextView
+                    android:id="@+id/ga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout1"
+                    android:layout_marginTop="@dimen/y3"
+                    android:layout_toLeftOf="@+id/gallery_c_tv"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="@string/goodsy"
+                    android:textColor="@color/grid_text_color"
+                    android:textSize="@dimen/sizetwo" />
+
+                <TextView
+                    android:id="@+id/gallery_c_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/layout1"
+                    android:layout_marginRight="@dimen/x12"
+                    android:layout_marginTop="@dimen/y3"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:textColor="@color/good_message_textcolors1"
+                    android:textSize="@dimen/sizetwo" />
+
+                <ProgressBar
+                    android:id="@+id/sumit_bar"
+                    style="@style/mProgress_horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="8dp"
+                    android:layout_below="@+id/need_textview"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginRight="@dimen/x5"
+                    android:layout_marginTop="@dimen/y3"
+                    android:layout_toRightOf="@+id/sp_fl"
+                    android:max="100"
+                    android:progressDrawable="@drawable/progressbar" />
+
+                <TextView
+                    android:id="@+id/sumit_jindu_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sumit_bar"
+                    android:layout_marginLeft="@dimen/x190"
+                    android:textColor="@color/background"
+                    android:textSize="@dimen/sizetwo" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y25"
+                android:layout_marginTop="@dimen/y9"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/submit_subtract"
+                    android:layout_width="@dimen/y25"
+                    android:layout_height="@dimen/y25"
+                    android:layout_marginRight="@dimen/x36"
+                    android:layout_toLeftOf="@+id/submit_edit"
+                    android:background="@drawable/btn_background_lightgray"
+                    android:clickable="false"
+                    android:onClick="onClick"
+                    android:text="@string/remove"
+                    android:textColor="@color/add_remove"
+                    android:textSize="@dimen/sizefour" />
+
+                <EditText
+                    android:id="@+id/submit_edit"
+                    android:layout_width="@dimen/x70"
+                    android:layout_height="@dimen/y25"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/btn_ground_co"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/random_one"
+                    android:textColor="@color/login_edittext_color"
+                    android:textSize="@dimen/sizefour" />
+
+                <TextView
+                    android:id="@+id/toggleButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_toRightOf="@+id/submit_edit"
+                    android:text="@string/add_hint"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizefour" />
+
+                <Button
+                    android:id="@+id/submit_add"
+                    android:layout_width="@dimen/y25"
+                    android:layout_height="@dimen/y25"
+                    android:layout_marginLeft="@dimen/x36"
+                    android:layout_toRightOf="@+id/submit_edit"
+                    android:background="@drawable/btn_background_yellow"
+                    android:onClick="onClick"
+                    android:text="@string/add"
+                    android:textColor="@color/add_remove"
+                    android:textSize="@dimen/sizefour" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y25"
+                android:layout_marginTop="@dimen/y8"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/center"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/times_one_textview"
+                    android:layout_width="@dimen/x60"
+                    android:layout_height="@dimen/y25"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_toLeftOf="@+id/times_two_textview"
+                    android:background="@drawable/btn_ground_co"
+                    android:onClick="onClick"
+                    android:text="@string/buy_ten_times"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizethree" />
+
+                <Button
+                    android:id="@+id/times_two_textview"
+                    android:layout_width="@dimen/x60"
+                    android:layout_height="@dimen/y25"
+                    android:layout_marginRight="@dimen/x5"
+                    android:layout_toLeftOf="@+id/center"
+                    android:background="@drawable/btn_groundlow_co"
+                    android:onClick="onClick"
+                    android:text="@string/buy_fifty_times"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizethree" />
+
+                <Button
+                    android:id="@+id/times_three_textview"
+                    android:layout_width="@dimen/x60"
+                    android:layout_height="@dimen/y25"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_toRightOf="@+id/center"
+                    android:background="@drawable/btn_ground_co"
+                    android:onClick="onClick"
+                    android:text="@string/buy_hundred_times"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizethree" />
+
+                <Button
+                    android:id="@+id/times_four_textview"
+                    android:layout_width="@dimen/x60"
+                    android:layout_height="@dimen/y25"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_marginRight="@dimen/x5"
+                    android:layout_toRightOf="@+id/times_three_textview"
+                    android:background="@drawable/btn_ground_co"
+                    android:onClick="onClick"
+                    android:text="@string/all_sy"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizethree" />
+            </RelativeLayout>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/y8"
+                layout="@layout/line_h" />
+			<RelativeLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="@dimen/y8"
+			    android:orientation="horizontal"
+			    android:paddingRight="@dimen/x12"
+			    >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:text="@string/random_num"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizethree" />
+            
+             <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/wenhao"
+                android:background="@null"
+                android:layout_centerVertical="true"
+                android:drawablePadding="@dimen/x5"
+               	android:layout_alignParentRight="true"
+                android:text="@string/random_num"
+                android:onClick="whatRandom"
+                android:textColor="@color/background"
+                android:textSize="@dimen/sizetwo" />
+			</RelativeLayout>
+            <Button
+                android:id="@+id/submit_random"
+                android:layout_width="@dimen/x70"
+                android:layout_height="@dimen/y25"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/y8"
+                android:background="@drawable/btn_background_yellow"
+                android:onClick="onClick"
+                android:text="@string/random_btn_hint"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sizethree" />
+
+            <Button
+                android:id="@+id/show_luckname_btn"
+                android:layout_width="@dimen/x60"
+                android:layout_height="@dimen/x60"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/y8"
+                android:background="@drawable/circle_btn"
+                android:gravity="center"
+                android:textColor="@color/index_btn"
+                android:textSize="@dimen/sizethree" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/y8"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/submit_luck_btn1"
+                    android:layout_width="@dimen/x29"
+                    android:layout_height="@dimen/x29"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:background="@drawable/circle_btn"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:text="@string/random_one"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizethree" />
+
+                <Button
+                    android:id="@+id/submit_luck_btn2"
+                    android:layout_width="@dimen/x29"
+                    android:layout_height="@dimen/x29"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:background="@drawable/circle_btn"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:text="@string/random_two"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizethree" />
+
+                <Button
+                    android:id="@+id/submit_luck_btn3"
+                    android:layout_width="@dimen/x29"
+                    android:layout_height="@dimen/x29"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:background="@drawable/circle_btn"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:text="@string/random_three"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizethree" />
+
+                <Button
+                    android:id="@+id/submit_luck_btn4"
+                    android:layout_width="@dimen/x29"
+                    android:layout_height="@dimen/x29"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:background="@drawable/circle_btn"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:text="@string/random_four"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizethree" />
+
+                <Button
+                    android:id="@+id/submit_luck_btn5"
+                    android:layout_width="@dimen/x29"
+                    android:layout_height="@dimen/x29"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginRight="@dimen/x5"
+                    android:background="@drawable/circle_btn"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:text="@string/random_five"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizethree" />
+
+                <Button
+                    android:id="@+id/submit_luck_btn6"
+                    android:layout_width="@dimen/x29"
+                    android:layout_height="@dimen/x29"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/x5"
+                    android:background="@drawable/circle_btn"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:text="@string/random_six"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizethree" />
+
+                <Button
+                    android:id="@+id/submit_luck_btn7"
+                    android:layout_width="@dimen/x29"
+                    android:layout_height="@dimen/x29"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/x5"
+                    android:background="@drawable/circle_btn"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:text="@string/random_seven"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizefour" />
+
+                <Button
+                    android:id="@+id/submit_luck_btn8"
+                    android:layout_width="@dimen/x29"
+                    android:layout_height="@dimen/x29"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/x5"
+                    android:background="@drawable/circle_btn"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:text="@string/random_eight"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizethree" />
+
+                <Button
+                    android:id="@+id/submit_luck_btn9"
+                    android:layout_width="@dimen/x29"
+                    android:layout_height="@dimen/x29"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/x5"
+                    android:background="@drawable/circle_btn"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:text="@string/random_nine"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizethree" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView> 
+
+    <include
+        android:id="@+id/line_h"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/layout_btn"
+        layout="@layout/line_h" />
+
+    <LinearLayout
+        android:id="@+id/layout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y31"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="@dimen/x130"
+            android:layout_height="@dimen/y21"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/x20"
+            android:background="@drawable/btn_background_gray"
+            android:onClick="cancelOrder"
+            android:text="@string/cancel_order"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizefour" />
+
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="@dimen/x130"
+            android:layout_height="@dimen/y21"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/x20"
+            android:background="@drawable/btn_background_yellow"
+            android:onClick="submitOrder"
+            android:text="@string/submit_order"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizefour" />
+    </LinearLayout>
+
+</RelativeLayout>

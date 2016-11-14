@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/pay_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <include layout="@layout/status_bar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y69" >
+
+            <LinearLayout
+                android:id="@+id/time_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/y19"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pay_time"
+                    android:textColor="@color/index_btn"
+                    android:textSize="@dimen/sizesix" />
+
+                <Button
+                    android:id="@+id/pay_time1_textview"
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/y18"
+                    android:layout_marginLeft="@dimen/x3"
+                    android:background="@drawable/btn_background_yellow"
+                    android:text="5"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sizefour" />
+
+                <Button
+                    android:id="@+id/pay_time2_textview"
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/y18"
+                    android:layout_marginLeft="@dimen/x3"
+                    android:background="@drawable/btn_background_yellow"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sizefour" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x3"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="@color/background"
+                    android:textSize="@dimen/sizefour" />
+
+                <Button
+                    android:id="@+id/pay_time3_textview"
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/y18"
+                    android:layout_marginLeft="@dimen/x3"
+                    android:background="@drawable/btn_background_yellow"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sizefour" />
+
+                <Button
+                    android:id="@+id/pay_time4_textview"
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/y18"
+                    android:layout_marginLeft="@dimen/x3"
+                    android:background="@drawable/btn_background_yellow"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sizefour" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/time_layout"
+                android:layout_centerHorizontal="true"
+                android:text="@string/pay_hint"
+                android:textColor="@color/index_btn"
+                android:textSize="@dimen/sizesix" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_h" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y25" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x20"
+                android:gravity="center"
+                android:text="@string/pay_heji"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizefour" />
+
+            <TextView
+                android:id="@+id/pay_numberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/x15"
+                android:layout_toLeftOf="@+id/pay_check_btn"
+                android:gravity="center"
+                android:text="元"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizefour" />
+
+            <ImageView
+                android:id="@+id/pay_check_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x13"
+                android:scaleType="centerCrop"
+                android:src="@drawable/yes_pay" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_h" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y25" >
+
+            <TextView
+                android:id="@+id/dinghaotextview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x20"
+                android:gravity="center"
+                android:text="@string/pay_codenum"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizefour" />
+
+            <TextView
+                android:id="@+id/paygoods_numbertextview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x9"
+                android:layout_marginRight="@dimen/x12"
+                android:layout_toRightOf="@+id/dinghaotextview"
+                android:gravity="center"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizefour" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_h" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y25" >
+
+            <TextView
+                android:id="@+id/balanceextview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x20"
+                android:gravity="center"
+                android:text="@string/pay_byyue"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizefour" />
+
+            <TextView
+                android:id="@+id/pay_balance_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x9"
+                android:layout_marginRight="@dimen/x12"
+                android:layout_toRightOf="@+id/balanceextview"
+                android:gravity="center"
+                android:text="(账户余额: 逐梦币)"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizefour" />
+
+            <Button
+                android:id="@+id/pay_balancecheck_btn"
+                android:layout_width="@dimen/x19"
+                android:layout_height="@dimen/x19"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x10"
+                android:background="@drawable/check_selector"
+                android:onClick="isUsebalance" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_h" />
+
+        <RelativeLayout
+            android:id="@+id/pay_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginTop="@dimen/y5"
+                android:gravity="center"
+                android:text="@string/other_pay"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizefour" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/pay_lastmoney_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x40"
+                android:layout_marginTop="@dimen/y5"
+                android:textColor="@color/background"
+                android:text="元"
+                android:textSize="@dimen/sizefour" />
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/pay_radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/y5"
+            android:layout_marginLeft="@dimen/x20"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/pay_radbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y8"
+                android:button="@null"
+                android:drawableLeft="@drawable/check_btn"
+                android:drawablePadding="@dimen/x8"
+                android:text="@string/wechat_pay"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizefour" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y8"
+                android:button="@null"
+                android:drawableLeft="@drawable/check_btn"
+                android:drawablePadding="@dimen/x8"
+                 android:visibility="gone"
+                android:text="@string/zhifubao_pay"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizefour" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y8"
+                android:button="@null"
+                android:drawableLeft="@drawable/check_btn"
+                android:drawablePadding="@dimen/x8"
+                android:text="@string/yi_pay"
+                android:visibility="gone"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizefour" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pay_lay" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="@dimen/x240"
+            android:layout_height="@dimen/y56"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/y27"
+            android:background="@color/white"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/y15"
+                android:text="T^T确认要放弃支付吗?梦想就在眼前哦!"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizefour" />
+
+            <Button
+                android:id="@+id/pay_btnsure"
+                android:layout_width="@dimen/x56"
+                android:layout_height="@dimen/y14"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/x9"
+                android:layout_marginRight="@dimen/x12"
+                android:layout_toLeftOf="@+id/pay_btnexit"
+                android:background="@drawable/btn_background_lightgray"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sizefour" />
+
+            <Button
+                android:id="@+id/pay_btnexit"
+                android:layout_width="@dimen/x56"
+                android:layout_height="@dimen/y14"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/x9"
+                android:layout_marginRight="@dimen/x9"
+                android:background="@drawable/btn_background_yellow"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sizefour" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/relativeLayout1"
+            android:layout_marginLeft="@dimen/x9"
+            android:layout_marginTop="@dimen/y17"
+            android:src="@drawable/warn"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/recharge_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y35"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/recharge_todobtn"
+            android:layout_width="@dimen/x250"
+            android:layout_height="@dimen/y22"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_background_yellow"
+            android:onClick="pay"
+            android:text="@string/sure_pay"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</RelativeLayout>

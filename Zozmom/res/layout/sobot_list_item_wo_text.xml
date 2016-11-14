@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="@dimen/sobot_DIMEN_48PX"
+    android:orientation="vertical" >
+
+    <!-- 我的 中间提醒内容 -->
+
+    <TextView
+        android:id="@+id/sobot_center_Remind_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/sobot_toast_selector"
+        android:gravity="center"
+        android:textColor="@color/sobot_listview_remind_text_color"
+        android:textSize="@dimen/sobot_listview_remind_text_size"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/sobot_center_Remind_note1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/sobot_toast_selector"
+        android:gravity="center"
+        android:textColor="@color/sobot_listview_remind_text_color"
+        android:textSize="@dimen/sobot_listview_remind_text_size"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/sobot_center_Remind_note2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/sobot_toast_selector"
+        android:gravity="center"
+        android:textColor="@color/sobot_listview_remind_text_color"
+        android:textSize="@dimen/sobot_listview_remind_text_size"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/sobot_center_Remind_note3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/sobot_toast_selector"
+        android:gravity="center"
+        android:textColor="@color/sobot_listview_remind_text_color"
+        android:textSize="@dimen/sobot_listview_remind_text_size"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/sobot_center_Remind_note4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/sobot_toast_selector"
+        android:gravity="center"
+        android:textColor="@color/sobot_listview_remind_text_color"
+        android:textSize="@dimen/sobot_listview_remind_text_size"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_not_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" >
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="50dp"
+            android:layout_height="0.1dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            android:background="#cdcdcd" />
+
+        <TextView
+            android:id="@+id/sobot_center_Remind_note5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sobot_DIMEN_36PX"
+            android:layout_toRightOf="@+id/view1"
+            android:text="@string/sobot_rl_not_read"
+            android:textColor="#afb2b2"
+            android:textSize="@dimen/sobot_listview_remind_text_size" />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@+id/sobot_center_Remind_note5"
+            android:background="#cdcdcd" />
+    </RelativeLayout>
+    <!-- 我的名称 -->
+
+    <TextView
+        android:id="@+id/sobot_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="@dimen/sobot_DIMEN_24PX"
+        android:lineSpacingExtra="@dimen/sobot_DIMEN_12PX"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <!-- 我的消息的内容 -->
+
+    <LinearLayout
+        android:id="@+id/sobot_my_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="@dimen/sobot_DIMEN_168PX"
+         >
+
+        <FrameLayout
+            android:id="@+id/sobot_frame_layout"
+            android:layout_width="@dimen/sobot_DIMEN_48PX"
+            android:layout_height="@dimen/sobot_DIMEN_48PX"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/sobot_msgStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sobot_re_send_selector"
+                android:contentDescription="@null"
+                android:text="@string/sobot_resend"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <!-- 消息的状态 -->
+
+            <ProgressBar
+                android:id="@+id/sobot_msgProgressBar"
+                style="?android:attr/progressBarStyleSmallTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/sobot_ll_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/sobot_DIMEN_36PX"
+            android:background="@drawable/sobot_chatto_bg_normal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/sobot_DIMEN_12PX"
+            android:paddingTop="@dimen/sobot_DIMEN_12PX" >
+
+            <TextView
+                android:id="@+id/sobot_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/sobot_DIMEN_10PX"
+                android:layout_marginLeft="@dimen/sobot_DIMEN_20PX"
+                android:layout_marginRight="@dimen/sobot_DIMEN_20PX"
+                android:layout_marginTop="2dp"
+                android:autoLink="email|phone|web"
+                android:lineSpacingExtra="1dp"
+                android:textColorLink="@color/sobot_color_link"
+                android:textColorHighlight="@color/sobot_color_link"
+                android:text="@string/sobot_chat_content"
+                android:textColor="@color/sobot_msg_text_color"
+                android:textSize="@dimen/sobot_msg_text_size"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/sobot_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/sobot_DIMEN_7PX"
+                android:layout_marginRight="@dimen/sobot_DIMEN_7PX"
+                android:autoLink="web"
+                android:background="#FF0000"
+                android:lineSpacingExtra="@dimen/sobot_DIMEN_12PX"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/sobot_iv_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="@dimen/sobot_DIMEN_48PX"
+                android:layout_marginRight="@dimen/sobot_DIMEN_96PX"
+                android:contentDescription="@null"
+                android:lineSpacingExtra="@dimen/sobot_DIMEN_12PX"
+                android:maxHeight="@dimen/sobot_DIMEN_240PX"
+                android:maxWidth="@dimen/sobot_DIMEN_480PX"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+            <!-- 图片的发送状态 -->
+
+            <TextView
+                android:id="@+id/sobot_pic_send_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:lineSpacingExtra="@dimen/sobot_DIMEN_12PX"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y28"
+        android:background="@color/background"
+        android:splitMotionEvents="false" >
+
+        <ImageButton
+            android:id="@+id/status_bar_Exit"
+            android:layout_width="@dimen/x35"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x4"
+            android:background="@null"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:src="@drawable/back_white" />
+
+        <TextView
+            android:id="@+id/status_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="关于我们"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y15"
+        android:src="@drawable/me_dream" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x12"
+        android:layout_marginRight="@dimen/x12"
+        android:layout_marginTop="@dimen/y15"
+        android:background="@drawable/btn_ground_co_gray"
+        android:focusable="false"
+        android:lineSpacingExtra="@dimen/y5"
+        android:padding="@dimen/y5"
+        android:text="    逐梦网是成都追逐梦想科技有限公司于2016年创建，通过强大的供应链优势，丰富的电子商务管理服务经验和最先进的互联网技术为用户提供最新最好的时尚精选商品。
+逐梦网以“诚信”和“共享经济”作为公司的核心模式，以“公正、公开、透明”的准则，以“超越客户期望”为目标，致力于为用户提供丰富的商品选择、便捷、好玩的娱乐购物方式和完善的售后服务，打造新一代的购物体验！"
+        android:textColor="@color/index_btn"
+        android:textSize="14sp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/y10"
+        android:layout_height="@dimen/y25" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x20"
+            android:gravity="center"
+            android:textColor="@color/index_btn"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/pay_check_btn"
+            android:layout_width="@dimen/x19"
+            android:layout_height="@dimen/x19"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x10"
+            android:background="@drawable/forward"
+            android:onClick="onClick" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y25" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x20"
+            android:gravity="center"
+            android:textColor="@color/index_btn"
+            android:textSize="14sp" />
+
+        <Button
+            android:layout_width="@dimen/x19"
+            android:layout_height="@dimen/x19"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x10"
+            android:background="@drawable/forward"
+            android:onClick="onClick" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y75"
+        android:text="Copyright  2016"
+        android:textColor="@color/good_message_textcolors"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="成都追逐梦想科技有限公司"
+        android:textColor="@color/good_message_textcolors"
+        android:textSize="14sp" />
+
+</LinearLayout>

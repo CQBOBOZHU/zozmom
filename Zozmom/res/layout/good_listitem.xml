@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/good_listtextview"
+            android:layout_width="@dimen/x84"
+            android:layout_height="@dimen/y14"
+            android:layout_marginTop="@dimen/y6"
+            android:background="@drawable/btn_ground_co_gray"
+            android:gravity="center"
+            android:textColor="@color/before_btncolor"
+            android:textSize="@dimen/sizefour" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y50"
+            android:layout_marginTop="@dimen/y6" >
+
+            <com.zozmom.cuview.CircleImageView
+                android:id="@+id/good_listitem_imageView1"
+                android:layout_width="@dimen/y33"
+                android:layout_height="@dimen/y33"
+                android:layout_centerVertical="true"
+                android:focusable="true"
+                android:src="@drawable/pic_loading" />
+
+            <RelativeLayout
+                android:id="@+id/qihao_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_toRightOf="@+id/good_listitem_imageView1" >
+
+                <TextView
+                    android:id="@+id/good_listitem_unm_textview1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="参与了"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizefour" />
+
+                <TextView
+                    android:id="@+id/good_listitem_unm_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/good_listitem_unm_textview1"
+                    android:textColor="@color/background"
+                    android:textSize="@dimen/sizefour" />
+
+                <TextView
+                    android:id="@+id/good_listitem_unm_textview2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/good_listitem_unm_textview"
+                    android:text="次"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizefour" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/good_listitem_textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/qihao_layout"
+                android:layout_marginBottom="@dimen/y3"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_toRightOf="@+id/good_listitem_imageView1"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizefour" />
+
+            <TextView
+                android:id="@+id/good_listitem_textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/qihao_layout"
+                android:layout_marginBottom="@dimen/y3"
+                android:layout_marginLeft="@dimen/x3"
+                android:layout_toRightOf="@+id/good_listitem_textView1"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizefour" />
+
+            <TextView
+                android:id="@+id/good_listitem_time_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/qihao_layout"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginTop="@dimen/y3"
+                android:layout_toRightOf="@+id/good_listitem_imageView1"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizefour" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y19"
+            android:background="@drawable/btn_background_yellow" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/y19"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/look_code"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sizefour" />
+
+            <Button
+                android:id="@+id/relayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x12"
+                android:background="@null"
+                android:drawablePadding="@dimen/x4"
+                android:drawableRight="@drawable/take_on_ye"
+                android:text="@string/open"
+                android:textColor="@color/textc"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/good_item_listview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_bg" />
+    </LinearLayout>
+
+</LinearLayout>

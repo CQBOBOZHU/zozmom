@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1" >
+
+    <include
+        layout="@layout/net_failure_activity"
+        android:visibility="gone" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/shopping_ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+
+        <com.zozmom.cuview.swipelistview.SwipeListView
+            android:id="@+id/shopping_swlistview"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dip"
+            android:focusableInTouchMode="true"
+            android:listSelector="#00000000"
+            swipe:swipeActionLeft="reveal"
+            swipe:swipeActionRight="reveal"
+            swipe:swipeAnimationTime="0"
+            swipe:swipeBackView="@+id/news_back"
+            swipe:swipeCloseAllItemsWhenMoveList="true"
+            swipe:swipeFrontView="@+id/news_front"
+            swipe:swipeMode="both"
+            swipe:swipeOffsetLeft="0dp"
+            swipe:swipeOffsetRight="0dp"
+            swipe:swipeOpenOnLongPress="false" >
+        </com.zozmom.cuview.swipelistview.SwipeListView>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/price_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="共1件商品，合计1元" />
+
+        <Button
+            android:id="@+id/l_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="结算" />
+    </LinearLayout>
+
+</RelativeLayout>

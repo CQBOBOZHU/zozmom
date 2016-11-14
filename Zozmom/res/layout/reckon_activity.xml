@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:layerType="software"
+    android:orientation="vertical" >
+
+    <include layout="@layout/stat_bar_white" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/pullto_listview"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                android:layout_marginTop="@dimen/y8"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/y3"
+                android:paddingTop="@dimen/y3" >
+
+                <TextView
+                    android:id="@+id/calcu_method_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingBottom="@dimen/y10"
+                    android:text="@string/reckon_type"
+                    android:textSize="@dimen/sizesix" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y44"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="@dimen/x55"
+                        android:layout_height="@dimen/x55"
+                        android:background="@drawable/circle_btn_red"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:minLines="2"
+                        android:text="幸运\n号码"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sizetwo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/x3"
+                        android:paddingRight="@dimen/x3"
+                        android:text="@string/ab" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/x100"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:paddingTop="@dimen/y3" >
+
+                        <LinearLayout
+                            android:id="@+id/li"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="@dimen/x3"
+                                android:text="数值A"
+                                android:textSize="@dimen/sizetwo" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/x3"
+                                android:paddingRight="@dimen/x3"
+                                android:text="+" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="@dimen/x3"
+                                android:text="数值B"
+                                android:textSize="@dimen/sizetwo" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tlin"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/li"
+                            android:layout_marginLeft="@dimen/x12"
+                            android:layout_marginRight="@dimen/x12"
+                            android:layout_marginTop="@dimen/y2"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/all_cview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tlin"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/y2"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="奖品所需人次"
+                            android:textSize="@dimen/sizetwo" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/all_cview"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/y3"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="(取余数)"
+                            android:textSize="@dimen/sizetwo" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/x3"
+                        android:paddingRight="@dimen/x3"
+                        android:text="+" />
+
+                    <TextView
+                        android:layout_width="@dimen/x55"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="@dimen/y3"
+                        android:layout_marginTop="@dimen/y3"
+                        android:gravity="center"
+                        android:text="10000001"
+                        android:textColor="@color/background"
+                        android:textSize="@dimen/sizetwo" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y8"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/y5" >
+
+                <TextView
+                    android:id="@+id/A_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:layout_marginTop="@dimen/y5"
+                    android:text="@string/reckon_a"
+                    android:textSize="@dimen/sizefour" />
+
+                <LinearLayout
+                    android:id="@+id/A_content_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/A_textview"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:layout_marginTop="@dimen/y5"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ab"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizefour" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reckon_a_mes"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizefour" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/A_content_view"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:layout_marginTop="@dimen/y5" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ab"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizefour" />
+
+                    <TextView
+                        android:id="@+id/A_code_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/background"
+                        android:textSize="@dimen/sizefour" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/Aopen_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/A_content_view"
+                    android:layout_marginRight="@dimen/x12"
+                    android:layout_marginTop="@dimen/y5"
+                    android:background="@drawable/item_selector"
+                    android:drawableLeft="@drawable/take_on_blue"
+                    android:drawablePadding="@dimen/x5"
+                    android:gravity="center"
+                    android:onClick="openA"
+                    android:text="@string/open"
+                    android:textColor="@color/good_message_textcolors1"
+                    android:textSize="@dimen/sizefour" />
+
+                <com.zozmom.cuview.CuListView
+                    android:id="@+id/A_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Aopen_textview"
+                    android:layout_marginTop="@dimen/y5"
+                    android:background="@color/line"
+                    android:divider="@null"
+                    android:listSelector="@android:color/transparent"
+                    android:paddingBottom="@dimen/y4"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y5"
+                android:background="@color/activity_bg" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/y5" >
+
+                <TextView
+                    android:id="@+id/B_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:layout_marginTop="@dimen/y5"
+                    android:text="@string/reckon_b"
+                    android:textSize="@dimen/sizefour" />
+
+                <LinearLayout
+                    android:id="@+id/B_content_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/B_textview"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:layout_marginTop="@dimen/y5"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ab"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizefour" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reckon_b_mes"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizefour" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/B_content_view"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:layout_marginTop="@dimen/y5"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ab"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizefour" />
+
+                    <TextView
+                        android:id="@+id/B_code_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/background"
+                        android:textSize="@dimen/sizefour" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/Bopen_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/B_content_view"
+                    android:layout_marginRight="@dimen/x12"
+                    android:layout_marginTop="@dimen/y5"
+                    android:background="@drawable/item_selector"
+                    android:drawableLeft="@drawable/take_on_blue"
+                    android:drawablePadding="@dimen/x5"
+                    android:gravity="center"
+                    android:onClick="openB"
+                    android:text="@string/open"
+                    android:textColor="@color/good_message_textcolors1"
+                    android:textSize="@dimen/sizefour" />
+
+                <com.zozmom.cuview.CuListView
+                    android:id="@+id/B_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Bopen_textview"
+                    android:layout_marginBottom="@dimen/y5"
+                    android:layout_marginTop="@dimen/y5"
+                    android:background="@color/line"
+                    android:divider="@null"
+                    android:listSelector="@android:color/transparent"
+                    android:paddingBottom="@dimen/y4"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y5"
+                android:background="@color/activity_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/reckon_openhint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:layout_marginTop="@dimen/y5"
+                    android:text="@string/reckon_result"
+                    android:textSize="@dimen/sizefour" />
+
+                <RelativeLayout
+                    android:id="@+id/reckon_mes"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y40"
+                    android:visibility="gone"
+                    android:paddingTop="@dimen/y3" >
+
+                    <TextView
+                        android:id="@+id/reab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/x12"
+                        android:text="="
+                        android:textSize="@dimen/sizefour" />
+
+                    <RelativeLayout
+                        android:id="@+id/re_lay"
+                        android:layout_width="@dimen/x120"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/reab" >
+
+                        <LinearLayout
+                            android:id="@+id/li1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/tlin1"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/a_textview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="@dimen/x3"
+                                android:text="8451215"
+                                android:textSize="@dimen/sizetwo" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/x3"
+                                android:paddingRight="@dimen/x3"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/b_textview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="@dimen/x3"
+                                android:text="520"
+                                android:textSize="@dimen/sizetwo" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tlin1"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/x5"
+                            android:layout_marginTop="@dimen/y2"
+                            android:layout_marginBottom="@dimen/y2"
+                            android:layout_marginRight="@dimen/x5"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/all_cview1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tlin1"
+                            android:layout_centerHorizontal="true"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="5604"
+                            android:textSize="@dimen/sizetwo" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/yu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/re_lay"
+                        android:text="余" />
+
+                    <TextView
+                        android:id="@+id/yushuview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/yu"
+                        android:layout_marginLeft="@dimen/x5"
+                        android:text="531" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/yushuview"
+                        android:text=" + 10000001" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/center_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:layout_marginTop="@dimen/y5"
+                    android:background="@drawable/line_dash" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/luck_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/y28"
+                        android:layout_marginRight="@dimen/x4"
+                        android:layout_weight="1"
+                        android:gravity="right|center_vertical"
+                        android:text="@string/luck_num"
+                        android:textColor="@color/index_btn"
+                        android:textSize="@dimen/sizefour" />
+
+                    <TextView
+                        android:id="@+id/luckunmView"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/y28"
+                        android:layout_marginLeft="@dimen/x4"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical"
+                        android:textColor="@color/background"
+                        android:textSize="@dimen/sizefour" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+</LinearLayout>

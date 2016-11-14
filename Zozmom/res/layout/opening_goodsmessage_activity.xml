@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y28"
+        android:background="@color/index_btn_chang"
+        android:splitMotionEvents="false" >
+
+        <ImageButton
+            android:id="@+id/status_bar_Exit"
+            android:layout_width="@dimen/x35"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:src="@drawable/back_white" />
+
+        <ImageButton
+            android:id="@+id/status_share"
+            android:layout_width="@dimen/x35"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x10"
+            android:background="@null"
+            android:gravity="center"
+            android:onClick="share"
+            android:src="@drawable/share_msg"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/status_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/sizeeight" />
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/goodscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/openly"
+        android:layout_below="@+id/status_bar"
+        android:background="@color/white"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/y10"
+                android:layout_marginTop="@dimen/y10" >
+
+                <ImageView
+                    android:id="@+id/good_imageview"
+                    android:layout_width="@dimen/y110"
+                    android:layout_height="@dimen/y110"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/pic_loading"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/opengood_disimageview"
+                    android:layout_width="@dimen/y37"
+                    android:layout_height="@dimen/y37"
+                    android:layout_alignLeft="@+id/good_imageview"
+                    android:layout_alignTop="@+id/good_imageview"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ten_yuan"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <Button
+                android:id="@+id/open_goodmessageBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y18"
+                android:background="@drawable/item_selector"
+                android:onClick="openMessage"
+                android:text="@string/see_detail"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizetwo" />
+
+            <include layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y3" >
+
+                <Button
+                    android:id="@+id/g_text1"
+                    android:layout_width="@dimen/x56"
+                    android:layout_height="@dimen/y14"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:background="@color/background"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="已揭晓"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sizefour" />
+
+                <TextView
+                    android:id="@+id/g_name_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginRight="@dimen/x12"
+                    android:layout_toRightOf="@+id/g_text1"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:textColor="@color/index_btn"
+                    android:textSize="@dimen/sizesix" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y9" >
+
+                <TextView
+                    android:id="@+id/qihao_view1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:gravity="center_vertical"
+                    android:text="期号:"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizefour" />
+
+                <TextView
+                    android:id="@+id/qihao_id_view1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x4"
+                    android:layout_toRightOf="@+id/qihao_view1"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/background"
+                    android:textSize="@dimen/sizefour" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x4"
+                    android:layout_toRightOf="@+id/qihao_id_view1"
+                    android:gravity="center_vertical"
+                    android:text="期"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizefour" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y6" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:layout_marginRight="@dimen/x12"
+                    android:layout_marginTop="@dimen/y2"
+                    android:background="@drawable/list_item_bottom"
+                    android:paddingBottom="@dimen/y5" >
+
+                    <com.zozmom.cuview.CircleImageView
+                        android:id="@+id/user_face_view"
+                        android:layout_width="@dimen/y25"
+                        android:layout_height="@dimen/y25"
+                        android:layout_marginLeft="@dimen/x9"
+                        android:layout_marginRight="@dimen/x9"
+                        android:layout_marginTop="@dimen/y20"
+                        android:onClick="toSeeOtherUser" />
+
+                    <TextView
+                        android:id="@+id/name_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/y7"
+                        android:layout_toRightOf="@+id/user_face_view"
+                        android:gravity="center_vertical"
+                        android:text="获得者:"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizefour" />
+
+                    <TextView
+                        android:id="@+id/user_name_view1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/name_view"
+                        android:layout_marginLeft="@dimen/x2"
+                        android:layout_toRightOf="@+id/name_view"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/good_message_textcolors1"
+                        android:textSize="@dimen/sizefour" />
+
+                    <TextView
+                        android:id="@+id/location_textview1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name_view"
+                        android:layout_marginTop="@dimen/y2"
+                        android:layout_toRightOf="@+id/user_face_view"
+                        android:gravity="center_vertical"
+                        android:text="来自于:"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizefour" />
+
+                    <TextView
+                        android:id="@+id/location_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/location_textview1"
+                        android:layout_below="@+id/name_view"
+                        android:layout_marginLeft="@dimen/x2"
+                        android:layout_marginTop="@dimen/y2"
+                        android:layout_toRightOf="@+id/location_textview1"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizefour" />
+
+                    <TextView
+                        android:id="@+id/locationip_textview1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/location_textview1"
+                        android:layout_marginTop="@dimen/y2"
+                        android:layout_toRightOf="@+id/user_face_view"
+                        android:gravity="center_vertical"
+                        android:text="IP:"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizefour" />
+
+                    <TextView
+                        android:id="@+id/locationip_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/locationip_textview1"
+                        android:layout_below="@+id/location_textview1"
+                        android:layout_marginLeft="@dimen/x2"
+                        android:layout_marginTop="@dimen/y2"
+                        android:layout_toRightOf="@+id/locationip_textview1"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizefour" />
+
+                    <TextView
+                        android:id="@+id/useid_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/locationip_textview1"
+                        android:layout_marginTop="@dimen/y2"
+                        android:layout_toRightOf="@+id/user_face_view"
+                        android:gravity="center_vertical"
+                        android:text="用户ID:"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizefour" />
+
+                    <TextView
+                        android:id="@+id/user_id_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/useid_view"
+                        android:layout_marginTop="@dimen/y2"
+                        android:layout_toRightOf="@+id/useid_view"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/background"
+                        android:textSize="@dimen/sizefour" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/user_id_view"
+                        android:layout_marginLeft="@dimen/x2"
+                        android:layout_marginTop="@dimen/y2"
+                        android:layout_toRightOf="@+id/user_id_view"
+                        android:gravity="center_vertical"
+                        android:text="(唯一不变标识)"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizefour" />
+
+                    <TextView
+                        android:id="@+id/qihao_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/user_id_view"
+                        android:layout_marginTop="@dimen/y2"
+                        android:layout_toRightOf="@+id/user_face_view"
+                        android:gravity="center_vertical"
+                        android:text="期号ID:"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizefour" />
+
+                    <TextView
+                        android:id="@+id/qihao_id_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/qihao_view"
+                        android:layout_marginLeft="@dimen/x2"
+                        android:layout_marginTop="@dimen/y2"
+                        android:layout_toRightOf="@+id/qihao_view"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/background"
+                        android:textSize="@dimen/sizefour" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/qihao_id_view"
+                        android:layout_marginLeft="@dimen/x2"
+                        android:layout_marginTop="@dimen/y2"
+                        android:layout_toRightOf="@+id/qihao_id_view"
+                        android:gravity="center_vertical"
+                        android:text="期"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizefour" />
+
+                    <TextView
+                        android:id="@+id/jion_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/qihao_view"
+                        android:layout_marginTop="@dimen/y2"
+                        android:layout_toRightOf="@+id/user_face_view"
+                        android:gravity="center_vertical"
+                        android:text="本期参与:"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizefour" />
+
+                    <TextView
+                        android:id="@+id/jion_times_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/jion_view"
+                        android:layout_marginLeft="@dimen/x2"
+                        android:layout_marginTop="@dimen/y2"
+                        android:layout_toRightOf="@+id/jion_view"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/background"
+                        android:textSize="@dimen/sizefour" />
+
+                    <TextView
+                        android:id="@+id/openviewitem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/jion_view"
+                        android:layout_marginTop="@dimen/y2"
+                        android:layout_toRightOf="@+id/user_face_view"
+                        android:gravity="center_vertical"
+                        android:text="揭晓时间:"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizefour" />
+
+                    <TextView
+                        android:id="@+id/open_time_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/openviewitem"
+                        android:layout_below="@+id/jion_view"
+                        android:layout_marginLeft="@dimen/x2"
+                        android:layout_marginTop="@dimen/y2"
+                        android:layout_toRightOf="@+id/openviewitem"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizefour" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x8"
+                    android:src="@drawable/man" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y23"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_marginRight="@dimen/x12"
+                android:background="@color/background" >
+
+                <TextView
+                    android:id="@+id/luck_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/y22"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/x9"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="幸运逐梦码:"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sizesix" />
+
+                <Button
+                    android:id="@+id/calcu_btn"
+                    android:layout_width="@dimen/x56"
+                    android:layout_height="@dimen/y15"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x9"
+                    android:background="@drawable/btn_background_yw"
+                    android:gravity="center"
+                    android:onClick="toReckon"
+                    android:text="@string/reckon"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sizetwo" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/opening_goodmessage_userlogin_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y22"
+                android:layout_marginTop="@dimen/y6"
+                android:gravity="center_horizontal"
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@+id/goodmessage_login_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/item_selector"
+                    android:onClick="login"
+                    android:text="登录"
+                    android:textColor="@color/background"
+                    android:textSize="@dimen/sizesix" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/goodmessage_login_btn"
+                    android:gravity="center"
+                    android:text="就可以看到自己参加的咯"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizesix" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/opengoodmessage_user_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y21"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/y5"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_marginRight="@dimen/x12"
+                android:layout_marginTop="@dimen/y6"
+                android:background="@drawable/btn_background_gray1"
+                android:gravity="center"
+                android:onClick="rquestLuck"
+                android:text="你没有参与这次逐梦"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizesix"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/goodmessage_rlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_marginRight="@dimen/x12"
+                android:background="@drawable/list_item_bg"
+                android:paddingBottom="@dimen/y3"
+                android:paddingTop="@dimen/y3"
+                android:visibility="gone" >
+
+                <com.zozmom.cuview.CuGridView
+                    android:id="@+id/lucknum_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x3"
+                    android:layout_marginRight="@dimen/x3"
+                    android:clickable="false"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="3"
+                    android:verticalSpacing="@dimen/y3" />
+
+                <Button
+                    android:id="@+id/lucknum_before_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/lucknum_gridview"
+                    android:layout_below="@+id/lucknum_gridview"
+                    android:layout_marginLeft="@dimen/x25"
+                    android:layout_marginTop="@dimen/y3"
+                    android:background="@drawable/item_selector"
+                    android:onClick="beforePage"
+                    android:text="上一页"
+                    android:textColor="@color/before_btncolor"
+                    android:textSize="@dimen/sizefour" />
+
+                <Button
+                    android:id="@+id/lucknum_after_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/lucknum_gridview"
+                    android:layout_below="@+id/lucknum_gridview"
+                    android:layout_marginRight="@dimen/x25"
+                    android:layout_marginTop="@dimen/y3"
+                    android:background="@drawable/item_selector"
+                    android:onClick="nextPage"
+                    android:text="下一页"
+                    android:textColor="@color/before_btncolor"
+                    android:textSize="@dimen/sizefour" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y5"
+                android:layout_marginTop="@dimen/y13"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:id="@+id/open_past_lay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y28"
+                android:background="@drawable/item_selector" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:gravity="center"
+                    android:text="往期揭晓"
+                    android:textColor="@color/index_btn"
+                    android:textSize="@dimen/sizesix" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x12"
+                    android:gravity="center"
+                    android:src="@drawable/forward" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:id="@+id/open_show_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y28"
+                android:background="@drawable/item_selector" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:text="晒单"
+                    android:textColor="@color/index_btn"
+                    android:textSize="@dimen/sizesix" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x12"
+                    android:src="@drawable/forward" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y5"
+                android:background="@color/line" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y28"
+                android:layout_marginLeft="@dimen/x12"
+                android:gravity="center_vertical"
+                android:text="所有参与记录，从这一刻开始..."
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizefour" />
+
+            <include layout="@layout/line_h" />
+
+            <com.zozmom.cuview.CuExpandableListview
+                android:id="@+id/opengood_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_marginRight="@dimen/x12"
+                android:divider="@null"
+                android:focusableInTouchMode="true" />
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+    <LinearLayout
+        android:id="@+id/openly"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y35"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <include layout="@layout/line_h" />
+
+        <Button
+            android:id="@+id/opening_goodmessage_todreambtn"
+            android:layout_width="@dimen/x126"
+            android:layout_height="@dimen/y25"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y5"
+            android:background="@drawable/btn_background_yellow"
+            android:onClick="toDream"
+            android:text="立即逐梦"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizesix" />
+    </LinearLayout>
+
+</RelativeLayout>

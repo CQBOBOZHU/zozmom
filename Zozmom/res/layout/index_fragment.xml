@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/status_bar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+
+        <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+            android:id="@+id/index_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:id="@+id/framelayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x118"
+                    android:background="@null" >
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/index_viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:id="@+id/radiogroup1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:layout_marginBottom="@dimen/y5"
+                        android:background="@null"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/rdo1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/x10"
+                            android:checked="true"
+                            android:src="@drawable/cicle_focused" />
+
+                        <ImageView
+                            android:id="@+id/rdo2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/cicle" />
+
+                        <ImageView
+                            android:id="@+id/rdo3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x10"
+                            android:src="@drawable/cicle" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y44"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:drawablePadding="@dimen/y2"
+                        android:drawableTop="@drawable/fenlei"
+                        android:onClick="gdGdCls"
+                        android:text="@string/good_facation"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizetwo" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:drawablePadding="@dimen/y2"
+                        android:drawableTop="@drawable/hongbao"
+                        android:onClick="hongBaoCls"
+                        android:text="@string/get_hongbao"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizetwo" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:drawablePadding="@dimen/y2"
+                        android:drawableTop="@drawable/help"
+                        android:onClick="sCenter"
+                        android:text="@string/customer_service_center"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizetwo" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y3"
+                    android:background="@color/line" />
+
+                <LinearLayout
+                    android:id="@+id/popuar_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y19"
+                    android:background="@drawable/btn_bottom_bg"
+                    android:onClick="onClick"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/popu_btn1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:onClick="onClick"
+                        android:text="@string/popularity"
+                        android:textColor="@color/index_btn_chang"
+                        android:textSize="@dimen/sizetwo" />
+
+                    <Button
+                        android:id="@+id/cmm_btn1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:onClick="onClick"
+                        android:text="@string/new_cmm"
+                        android:textColor="@color/index_btn"
+                        android:textSize="@dimen/sizetwo" />
+
+                    <Button
+                        android:id="@+id/cum_btn1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:onClick="onClick"
+                        android:text="@string/cum"
+                        android:textColor="@color/index_btn"
+                        android:textSize="@dimen/sizetwo" />
+
+                    <Button
+                        android:id="@+id/need_btn1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:onClick="onClick"
+                        android:text="@string/need_men"
+                        android:textColor="@color/index_btn"
+                        android:textSize="@dimen/sizetwo" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <com.zozmom.cuview.CuGridView
+                        android:id="@+id/index_gridView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/line"
+                        android:focusable="false"
+                        android:focusableInTouchMode="true"
+                        android:horizontalSpacing="1dp"
+                        android:numColumns="2"
+                        android:verticalSpacing="1dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+        <LinearLayout
+            android:id="@+id/popuar_lay1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y19"
+            android:background="@drawable/btn_bottom_bg"
+            android:onClick="onClick"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/popu_btn2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:lines="1"
+                android:onClick="onClick"
+                android:text="@string/popularity"
+                android:textColor="@color/index_btn_chang"
+                android:textSize="@dimen/sizetwo" />
+
+            <Button
+                android:id="@+id/cmm_btn2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:lines="1"
+                android:onClick="onClick"
+                android:text="@string/new_cmm"
+                android:textColor="@color/index_btn"
+                android:textSize="@dimen/sizetwo" />
+
+            <Button
+                android:id="@+id/cum_btn2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:lines="1"
+                android:onClick="onClick"
+                android:text="@string/cum"
+                android:textColor="@color/index_btn"
+                android:textSize="@dimen/sizetwo" />
+
+            <Button
+                android:id="@+id/need_btn2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:lines="1"
+                android:onClick="onClick"
+                android:text="@string/need_men"
+                android:textColor="@color/index_btn"
+                android:textSize="@dimen/sizetwo" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

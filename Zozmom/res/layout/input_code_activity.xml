@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/status_bar" />
+
+    <include
+        android:id="@+id/notloginview"
+        layout="@layout/warn_user_login"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/input_lay"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/y25"
+            android:layout_marginLeft="@dimen/x13"
+            android:layout_marginRight="@dimen/x13"
+            android:layout_marginTop="@dimen/y15"
+            android:background="@drawable/btn_ground_co" >
+
+            <EditText
+                android:id="@+id/input_code_editview"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                android:background="@null"
+                android:digits="0123456789abcdefghigklmnopqrstuvwxyzZXCVBNMLKJHGFDSAQWERTYUIOP"
+                android:gravity="center"
+                android:hint="请输入7位邀请码"
+                android:textColor="@color/index_btn"
+                android:textColorHint="@color/before_btncolor"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/input_code_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/y25"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/x13"
+            android:layout_marginRight="@dimen/x13"
+            android:layout_marginTop="@dimen/y9"
+            android:background="@drawable/btn_background_yellow"
+            android:onClick="toSure"
+            android:text="@string/toreplace"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x25"
+            android:layout_marginTop="@dimen/y15"
+            android:text="@string/code_hint"
+            android:textColor="@color/good_message_textcolors"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x25"
+            android:layout_marginRight="@dimen/x15"
+            android:layout_marginTop="@dimen/y6"
+            android:lineSpacingExtra="@dimen/y6"
+            android:text="@string/code_rule"
+            android:textColor="@color/good_message_textcolors"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/show_invited_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y53"
+            android:gravity="center"
+            android:text="您已绑定邀请码"
+            android:textColor="@color/background"
+            android:textSize="@dimen/sizeeight" />
+
+        <include layout="@layout/line_h" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="@dimen/y52" >
+
+            <com.zozmom.cuview.CircleImageView
+                android:id="@+id/input_imageview"
+                android:layout_width="@dimen/x47"
+                android:layout_height="@dimen/x47"
+                android:onClick="Wth"
+                android:layout_marginLeft="@dimen/x12"
+                android:src="@drawable/deimage" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/y52"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/x29" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="邀请人"
+                    android:textSize="@dimen/sizefour" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y9"
+                    android:text="邀请人ID"
+                    android:textSize="@dimen/sizefour" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/y52"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/x29" >
+
+                <TextView
+                    android:id="@+id/invited_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="小宝"
+                    android:textColor="@color/background"
+                    android:textSize="@dimen/sizefour" />
+
+                <TextView
+                    android:id="@+id/invited_userinvitedCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y9"
+                    android:text="9886481"
+                     android:textColor="@color/background"
+                    android:textSize="@dimen/sizefour" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

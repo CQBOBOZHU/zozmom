@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/y20"
+        android:orientation="vertical" >
+
+        <include layout="@layout/status_bar" />
+
+        <TextView
+            android:id="@+id/recharge_sucess_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y63"
+            android:text="您已成功兑换100元逐梦币!!"
+            android:textColor="@color/me_textcolor"
+            android:textSize="@dimen/sizeeight" />
+
+        <Button
+            android:id="@+id/recharge_sucess_ingbutton"
+            android:layout_width="@dimen/x250"
+            android:layout_height="@dimen/y22"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y63"
+            android:background="@drawable/btn_background_yellow"
+            android:onClick="onClick"
+            android:text="@string/go_shopping"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizefour" />
+
+        <Button
+            android:id="@+id/recharge_sucess_sharehongbao_button"
+            android:layout_width="@dimen/x250"
+            android:layout_height="@dimen/y22"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y6"
+            android:background="@drawable/btn_background_yellow"
+            android:onClick="onClick"
+            android:text="@string/givefriendhongbao"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizefour" />
+
+        <Button
+            android:id="@+id/recharge_sucess_notsharehongbao_button"
+            android:layout_width="@dimen/x250"
+            android:layout_height="@dimen/y22"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y6"
+            android:background="@drawable/btn_background_lightgray"
+            android:onClick="onClick"
+            android:visibility="gone"
+            android:text="@string/notgivefriendhongbao"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizefour" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/share_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/share_hongbao_lay"
+        android:visibility="gone" />
+
+</RelativeLayout>

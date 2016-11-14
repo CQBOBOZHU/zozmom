@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="@dimen/x223"
+        android:layout_height="@dimen/y91"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y25"
+            android:gravity="center_horizontal"
+            android:text="修改成功"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/index_btn"
+            android:textSize="@dimen/sizesix" />
+
+        <Button
+            android:id="@+id/alter_pwd_sucessbtn"
+            android:layout_width="@dimen/x116"
+            android:layout_height="@dimen/y19"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/y15"
+            android:background="@drawable/btn_background_yellow"
+            android:gravity="center"
+            android:text="返回我的逐梦"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizefour" />
+    </LinearLayout>
+
+</LinearLayout>

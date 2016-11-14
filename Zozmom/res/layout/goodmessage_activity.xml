@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <RelativeLayout
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y28"
+        android:background="@color/index_btn_chang" >
+
+        <ImageButton
+            android:id="@+id/status_bar_Exit"
+            android:layout_width="@dimen/x35"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_select"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:src="@drawable/back_white" />
+
+        <ImageButton
+            android:id="@+id/status_share"
+            android:layout_width="@dimen/x35"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x10"
+            android:background="@drawable/btn_select"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:onClick="share"
+            android:src="@drawable/share_msg"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/status_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/sizeeight" />
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/goodscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/goodblay"
+        android:layout_below="@+id/status_bar"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/y10"
+                android:paddingTop="@dimen/y10" >
+
+                <ImageView
+                    android:id="@+id/good_imageview"
+                    android:layout_width="@dimen/y110"
+                    android:layout_height="@dimen/y110"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@null"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/app_name" />
+
+                <ImageView
+                    android:id="@+id/good_disimageview"
+                    android:layout_width="@dimen/y37"
+                    android:layout_height="@dimen/y37"
+                    android:layout_alignLeft="@+id/good_imageview"
+                    android:layout_alignTop="@+id/good_imageview"
+                    android:background="@null"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ten_yuan"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <Button
+                android:id="@+id/open_goodmessageBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y18"
+                android:background="@drawable/item_selector"
+                android:onClick="openDetail"
+                android:text="@string/see_detail"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizetwo" />
+
+            <include layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y5" >
+
+                <Button
+                    android:id="@+id/g_text1"
+                    android:layout_width="@dimen/x55"
+                    android:layout_height="@dimen/y18"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:background="@drawable/btn_background_yellow"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="@string/shopping"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sizefour" />
+
+                <TextView
+                    android:id="@+id/g_name_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginRight="@dimen/x5"
+                    android:layout_toRightOf="@+id/g_text1"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:textColor="@color/index_btn"
+                    android:textSize="@dimen/sizesix" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_marginRight="@dimen/x12"
+                android:layout_marginTop="@dimen/y5" >
+
+                <TextView
+                    android:id="@+id/qishu_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/goodconunt"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizetwo" />
+
+                <TextView
+                    android:id="@+id/goodmessage_isueidview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x4"
+                    android:layout_toRightOf="@+id/qishu_text"
+                    android:gravity="center"
+                    android:textColor="@color/background"
+                    android:textSize="@dimen/sizetwo" />
+
+                <TextView
+                    android:id="@+id/jindu_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/x4"
+                    android:gravity="center"
+                    android:textColor="@color/background"
+                    android:textSize="@dimen/sizetwo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/jindu_textview"
+                    android:gravity="center"
+                    android:text="@string/dream_progress"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizetwo" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="@style/mProgress_horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/x8"
+                    android:layout_below="@+id/qishu_text"
+                    android:layout_marginTop="@dimen/y5"
+                    android:max="100"
+                    android:progressDrawable="@drawable/progressbar" />
+
+                <TextView
+                    android:id="@+id/shengyu_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/progress_bar"
+                    android:layout_marginLeft="@dimen/x4"
+                    android:layout_marginTop="@dimen/y3"
+                    android:gravity="center"
+                    android:textColor="@color/good_message_textcolors1"
+                    android:textSize="@dimen/sizetwo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/progress_bar"
+                    android:layout_marginTop="@dimen/y3"
+                    android:layout_toLeftOf="@+id/shengyu_textview"
+                    android:gravity="center"
+                    android:text="@string/goodsy"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizetwo" />
+
+                <TextView
+                    android:id="@+id/all_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/progress_bar"
+                    android:layout_marginTop="@dimen/y5"
+                    android:gravity="center"
+                    android:text="@string/good_allconut"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizetwo" />
+
+                <TextView
+                    android:id="@+id/goodmessage_allcountView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/progress_bar"
+                    android:layout_marginLeft="@dimen/x4"
+                    android:layout_marginTop="@dimen/y5"
+                    android:layout_toRightOf="@+id/all_text"
+                    android:gravity="center"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizetwo" />
+
+                <Button
+                    android:id="@+id/goodmessage_userhint_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y22"
+                    android:layout_below="@+id/all_text"
+                    android:layout_marginTop="@dimen/y5"
+                    android:background="@drawable/btn_background_yellow"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:text="@string/not_join_hint"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sizesix" />
+
+                <RelativeLayout
+                    android:id="@+id/warn_userloginlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y21"
+                    android:layout_below="@+id/all_text"
+                    android:layout_marginBottom="@dimen/y5"
+                    android:layout_marginTop="@dimen/y5"
+                    android:gravity="center_horizontal"
+                    android:visibility="gone" >
+
+                    <Button
+                        android:id="@+id/goodmessage_login_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:onClick="startLogin"
+                        android:text="@string/login"
+                        android:textColor="@color/background"
+                        android:textSize="@dimen/sizesix" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/goodmessage_login_btn"
+                        android:gravity="center"
+                        android:text="@string/login_hint"
+                        android:textColor="@color/good_message_textcolors"
+                        android:textSize="@dimen/sizesix" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/goodmessage_rlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/goodmessage_userhint_btn"
+                    android:background="@drawable/list_item_bg"
+                    android:paddingBottom="@dimen/y3"
+                    android:paddingTop="@dimen/y3"
+                    android:visibility="gone" >
+
+                    <com.zozmom.cuview.CuGridView
+                        android:id="@+id/lucknum_gridview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x3"
+                        android:layout_marginRight="@dimen/x3"
+                        android:layout_marginTop="@dimen/y5"
+                        android:clickable="false"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="3"
+                        android:verticalSpacing="@dimen/y8" />
+
+                    <Button
+                        android:id="@+id/lucknum_before_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/lucknum_gridview"
+                        android:layout_below="@+id/lucknum_gridview"
+                        android:layout_marginBottom="@dimen/y10"
+                        android:layout_marginLeft="@dimen/x25"
+                        android:layout_marginTop="@dimen/y9"
+                        android:background="@drawable/item_selector"
+                        android:onClick="beforePage"
+                        android:text="@string/page_before"
+                        android:textColor="@color/before_btncolor"
+                        android:textSize="@dimen/sizefour" />
+
+                    <Button
+                        android:id="@+id/lucknum_after_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/lucknum_gridview"
+                        android:layout_below="@+id/lucknum_gridview"
+                        android:layout_marginBottom="@dimen/y10"
+                        android:layout_marginRight="@dimen/x25"
+                        android:layout_marginTop="@dimen/y9"
+                        android:background="@drawable/item_selector"
+                        android:onClick="nextPage"
+                        android:text="@string/page_next"
+                        android:textColor="@color/before_btncolor"
+                        android:textSize="@dimen/sizefour" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y3"
+                android:layout_marginTop="@dimen/y13"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:id="@+id/past_lay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y25"
+                android:background="@drawable/item_selector" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/y28"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:gravity="center"
+                    android:text="@string/open_before"
+                    android:textColor="@color/index_btn"
+                    android:textSize="@dimen/sizesix" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x12"
+                    android:contentDescription="@string/app_name"
+                    android:gravity="center"
+                    android:src="@drawable/forward" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:id="@+id/show_lay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y25"
+                android:background="@drawable/item_selector" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:text="@string/openlist"
+                    android:textColor="@color/index_btn"
+                    android:textSize="@dimen/sizesix" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x12"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/forward" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y5"
+                android:background="@color/line" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y28"
+                android:layout_marginLeft="@dimen/x12"
+                android:gravity="center_vertical"
+                android:text="@string/dream_start"
+                android:textColor="@color/index_btn"
+                android:textSize="@dimen/sizefour" />
+
+            <include layout="@layout/line_h" />
+
+            <com.zozmom.cuview.CuExpandableListview
+                android:id="@+id/good_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_marginRight="@dimen/x12"
+                android:divider="@null" />
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+    <LinearLayout
+        android:id="@+id/goodblay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y35"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <include layout="@layout/line_h" />
+
+        <Button
+            android:id="@+id/go_shopping_btn"
+            android:layout_width="@dimen/x126"
+            android:layout_height="@dimen/y25"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y5"
+            android:background="@drawable/btn_background_yellow"
+            android:onClick="gosubmit"
+            android:text="@string/go_shopping"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizesix" />
+    </LinearLayout>
+
+</RelativeLayout>

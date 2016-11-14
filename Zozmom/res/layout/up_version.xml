@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/upversion_cor"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/new_version" />
+
+            <TextView
+                android:id="@+id/up_title_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:paddingBottom="@dimen/y7"
+                android:paddingRight="@dimen/x18"
+                android:text="V1.0.3"
+                android:textColor="@color/version_color"
+                android:textSize="@dimen/sizesix" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/up_content_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:lineSpacingExtra="@dimen/y3"
+            android:paddingBottom="@dimen/y9"
+            android:paddingLeft="@dimen/x18"
+            android:paddingRight="@dimen/x18"
+            android:paddingTop="@dimen/y9"
+            android:text="新版本特性\n1.增加图片识别功能\n2.修改了用户管理的bug\n3.添加删除好友功能,并添加了视频通话"
+            android:textSize="@dimen/sizesix" />
+
+        <FrameLayout
+            android:id="@+id/updata_proview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y21"
+            android:background="@color/white" >
+
+            <ProgressBar
+                android:id="@+id/download_progressbar"
+                style="@style/mProgress_horizontal1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y21"
+                android:layout_marginLeft="@dimen/x18"
+                android:layout_marginRight="@dimen/x18" />
+
+            <TextView
+                android:id="@+id/download_hintview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sizefour" />
+
+            <Button
+                android:id="@+id/up_sure_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y21"
+                android:layout_marginLeft="@dimen/x18"
+                android:layout_marginRight="@dimen/x18"
+                android:background="@drawable/update_version_btn"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sizesix" />
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/bm_ci" />
+    </LinearLayout>
+
+</LinearLayout>

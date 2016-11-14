@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sobot_color_bottom_bg"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:weightSum="4" >
+
+    <RelativeLayout
+        android:id="@+id/sobot_btn_picture_r"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1" >
+
+        <ImageButton
+            android:id="@+id/sobot_btn_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/sobot_tack_picture_button_selector"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sobot_btn_picture"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/sobot_upload"
+            android:textColor="@color/sobot_color_bottom_upload_btn_color"
+            android:textSize="@dimen/sobot_text_font_small"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sobot_btn_picture_m"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1" >
+
+        <ImageButton
+            android:id="@+id/sobot_btn_take_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/sobot_camera_picture_button_selector"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sobot_btn_take_picture"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/sobot_attach_take_pic"
+            android:textColor="@color/sobot_color_bottom_upload_btn_color"
+            android:textSize="@dimen/sobot_text_font_small"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sobot_btn_take_picture_r"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1" >
+
+        <ImageButton
+            android:id="@+id/sobot_btn_satisfaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/sobot_picture_satisfaction_selector"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sobot_btn_satisfaction"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/sobot_str_bottom_satisfaction"
+            android:textColor="@color/sobot_color_bottom_upload_btn_color"
+            android:textSize="@dimen/sobot_text_font_small"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</LinearLayout>

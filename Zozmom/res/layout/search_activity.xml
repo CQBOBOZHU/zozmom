@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:splitMotionEvents="false"
+    android:weightSum="1" >
+
+    <LinearLayout
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y32"
+        android:background="@color/index_btn_chang"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/status_bar_Exit"
+            android:layout_width="@dimen/x35"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:src="@drawable/back_white" />
+
+        <LinearLayout
+            android:layout_width="@dimen/x250"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/y2"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_marginRight="@dimen/x12"
+            android:layout_marginTop="@dimen/y2"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="@dimen/x40"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:imeOptions="actionSearch"
+                android:onClick="onClick"
+                android:scaleType="centerInside"
+                android:src="@drawable/search_btn" />
+
+            <EditText
+                android:id="@+id/search_edit"
+                android:layout_width="@dimen/x210"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="@string/search"
+                android:lines="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y32"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x10"
+            android:gravity="center_vertical"
+            android:text="热门搜索"
+            android:textColor="@color/index_textvoice"
+            android:textSize="15sp" />
+
+        <Button
+            android:layout_width="@dimen/x70"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/y2"
+            android:background="@drawable/btn_background_yellow"
+            android:gravity="center"
+            android:text="笔记本"
+            android:layout_marginLeft="@dimen/x10"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:layout_width="@dimen/x60"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/y2"
+            android:layout_marginLeft="@dimen/x10"
+            android:background="@drawable/btn_background_yellow"
+            android:gravity="center"
+            android:text="apple"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <include layout="@layout/line_h" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y32"
+       >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="@dimen/y2"
+            android:gravity="center"
+            android:text="搜索历史"
+            android:textColor="@color/index_textvoice"
+            android:textSize="15sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/y2"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:gravity="center"
+            android:text="清空"
+            android:textColor="@color/good_message_textcolors"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_h" />
+
+</LinearLayout>

@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <include layout="@layout/status_bar" />
+
+    <include layout="@layout/line_h" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="onClick"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/y25"
+                android:layout_marginTop="@dimen/y10"
+                android:background="@null"
+                android:text="一元专区"
+                android:textColor="@color/background" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/y25"
+                android:layout_marginTop="@dimen/y10"
+                android:background="@null"
+                android:text="十元专区"
+                android:onClick="tenDis"
+                android:textColor="@color/grid_text_color" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/y25"
+                android:layout_marginTop="@dimen/y10"
+                android:background="@null"
+                android:text="百元专区"
+                android:onClick="hundredDis"
+                android:textColor="@color/grid_text_color" />
+        </LinearLayout>
+
+        <include layout="@layout/line_v" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/gd_laytwo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y30"
+                android:layout_marginLeft="@dimen/x12"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="@dimen/x23"
+                    android:layout_height="@dimen/x23"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:scaleType="center"
+                    android:src="@drawable/good_two" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x6"
+                    android:text="@string/good_two"
+                    android:textColor="@color/grid_text_color"
+                    android:textSize="@dimen/sizefour" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_marginRight="@dimen/x12"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:id="@+id/gd_laythree"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y30"
+                android:layout_marginLeft="@dimen/x12"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="@dimen/x23"
+                    android:layout_height="@dimen/x23"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:scaleType="center"
+                    android:src="@drawable/good_three" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x6"
+                    android:text="@string/good_three"
+                    android:textColor="@color/grid_text_color"
+                    android:textSize="@dimen/sizefour" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_marginRight="@dimen/x12"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:id="@+id/gd_layfour"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y30"
+                android:layout_marginLeft="@dimen/x12"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="@dimen/x23"
+                    android:layout_height="@dimen/x23"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:scaleType="center"
+                    android:src="@drawable/good_four" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x6"
+                    android:text="@string/good_four"
+                    android:textColor="@color/grid_text_color"
+                    android:textSize="@dimen/sizefour" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_marginRight="@dimen/x12"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:id="@+id/gd_layfive"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y30"
+                android:layout_marginLeft="@dimen/x12"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="@dimen/x23"
+                    android:layout_height="@dimen/x23"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:scaleType="center"
+                    android:src="@drawable/lady" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x6"
+                    android:text="@string/good_five"
+                    android:textColor="@color/grid_text_color"
+                    android:textSize="@dimen/sizefour" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_marginRight="@dimen/x12"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:id="@+id/gd_laysix"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y30"
+                android:layout_marginLeft="@dimen/x12"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="@dimen/x23"
+                    android:layout_height="@dimen/x23"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:scaleType="center"
+                    android:src="@drawable/good_six" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x6"
+                    android:text="@string/good_six"
+                    android:textColor="@color/grid_text_color"
+                    android:textSize="@dimen/sizefour" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_marginRight="@dimen/x12"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:id="@+id/gd_layseven"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y30"
+                android:layout_marginLeft="@dimen/x12"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="@dimen/x23"
+                    android:layout_height="@dimen/x23"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:scaleType="center"
+                    android:src="@drawable/good_seven" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x6"
+                    android:text="@string/good_seven"
+                    android:textColor="@color/grid_text_color"
+                    android:textSize="@dimen/sizefour" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_marginRight="@dimen/x12"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:id="@+id/gd_layeight"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y30"
+                android:layout_marginLeft="@dimen/x12"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="@dimen/x23"
+                    android:layout_height="@dimen/x23"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:scaleType="center"
+                    android:src="@drawable/good_eight" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x6"
+                    android:text="@string/good_eight"
+                    android:textColor="@color/grid_text_color"
+                    android:textSize="@dimen/sizefour" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_marginRight="@dimen/x12"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:id="@+id/gd_layten"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y30"
+                android:layout_marginLeft="@dimen/x12"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="@dimen/x23"
+                    android:layout_height="@dimen/x23"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:scaleType="center"
+                    android:src="@drawable/lb_car" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x6"
+                    android:text="@string/good_ten"
+                    android:textColor="@color/grid_text_color"
+                    android:textSize="@dimen/sizefour" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_marginRight="@dimen/x12"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:id="@+id/gd_laynine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y30"
+                android:layout_marginLeft="@dimen/x12"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="@dimen/x23"
+                    android:layout_height="@dimen/x23"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:scaleType="center"
+                    android:src="@drawable/good_nine" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x6"
+                    android:text="@string/good_nine"
+                    android:textColor="@color/grid_text_color"
+                    android:textSize="@dimen/sizefour" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_marginRight="@dimen/x12"
+                android:background="@color/line" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

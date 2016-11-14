@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y19"
+        android:layout_marginLeft="@dimen/x12"
+        android:gravity="center_vertical"
+        android:text="1佣金=1逐梦币"
+        android:textColor="@color/me_textcolor"
+        android:textSize="@dimen/sizefour" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y31"
+        android:background="@color/activity_bg" >
+
+        <TextView
+            android:id="@+id/yongj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x12"
+            android:text="佣金"
+            android:textColor="@color/me_textcolor"
+            android:textSize="@dimen/sizefour" />
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="1dp"
+            android:layout_height="@dimen/y19"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x17"
+            android:layout_toRightOf="@+id/yongj"
+            android:background="@color/white" />
+
+        <EditText
+            android:id="@+id/comm_editview"
+            android:layout_width="@dimen/x171"
+            android:layout_height="@dimen/y21"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x17"
+            android:layout_toRightOf="@+id/line"
+            android:background="@drawable/btn_white"
+            android:hint="请输入佣金"
+            android:inputType="number"
+            android:paddingLeft="@dimen/x10"
+            android:textColorHint="@color/edit_gb"
+            android:textSize="@dimen/sizefour" />
+
+        <Button
+            android:id="@+id/all_Btn"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/y21"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/comm_editview"
+            android:background="@null"
+            android:text="全部兑换"
+            android:textColor="@color/background"
+            android:textSize="@dimen/sizefour" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/duihuanBtn"
+        android:layout_width="@dimen/x296"
+        android:layout_height="@dimen/y25"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/y16"
+        android:background="@drawable/btn_background_d7"
+        android:gravity="center"
+        android:text="兑换"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sizeseven" />
+
+</LinearLayout>

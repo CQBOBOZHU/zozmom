@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/list_item_bg" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/y6"
+        android:background="@drawable/list_item_bg" >
+
+        <com.zozmom.cuview.CuGridView
+            android:id="@+id/list_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/y6"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="3"
+            android:scrollbars="none"
+            android:verticalSpacing="@dimen/y8" />
+
+        <Button
+            android:id="@+id/f_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/list_grid"
+            android:layout_below="@+id/list_grid"
+            android:layout_marginLeft="@dimen/x25"
+            android:layout_marginTop="@dimen/y9"
+            android:background="@drawable/item_selector"
+            android:gravity="center"
+            android:text="上一页"
+            android:textColor="@color/before_btncolor"
+            android:textSize="@dimen/sizefour" />
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/list_grid"
+            android:layout_below="@+id/list_grid"
+            android:layout_marginRight="@dimen/x25"
+            android:layout_marginTop="@dimen/y6"
+            android:background="@drawable/item_selector"
+            android:gravity="center"
+            android:text="下一页"
+            android:textColor="@color/before_btncolor"
+            android:textSize="@dimen/sizefour" />
+    </RelativeLayout>
+
+</RelativeLayout>

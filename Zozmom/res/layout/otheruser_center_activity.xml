@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/status_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/other_user_bg"
+        android:layout_height="@dimen/y49" >
+
+        <com.zozmom.cuview.CircleImageView
+            android:id="@+id/user_face_imageview"
+            android:layout_width="@dimen/y32"
+            android:layout_height="@dimen/y32"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x12"
+            android:src="@drawable/deimage" />
+
+        <TextView
+            android:id="@+id/other_useridview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x15"
+            android:layout_marginTop="@dimen/y12"
+            android:layout_toRightOf="@+id/user_face_imageview"
+            android:text="@string/userid_hint"
+            android:textColor="@color/good_message_textcolors"
+            android:textSize="@dimen/sizefour" />
+
+        <TextView
+            android:id="@+id/other_usernameview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/y12"
+            android:layout_marginLeft="@dimen/x15"
+            android:layout_toRightOf="@+id/user_face_imageview"
+            android:text="@string/usernname_hint"
+            android:textColor="@color/good_message_textcolors"
+            android:textSize="@dimen/sizefour" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_h" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x26"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/dreamlist_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="onViewClick"
+            android:text="@string/dream_list"
+            android:textColor="@color/background"
+            android:textSize="@dimen/sizefour" />
+
+        <Button
+            android:id="@+id/cometrue_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+             android:onClick="onViewClick"
+            android:text="@string/cometrue_dream"
+            android:textColor="@color/index_btn"
+            android:textSize="@dimen/sizefour" />
+
+        <Button
+            android:id="@+id/myshowlist_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+             android:onClick="onViewClick"
+            android:text="@string/he_showlist"
+            android:textColor="@color/index_btn"
+            android:textSize="@dimen/sizefour" />
+    </LinearLayout>
+
+    <include layout="@layout/line_h" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/user_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>

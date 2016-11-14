@@ -1,0 +1,640 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.chasedream.zhumeng"
+    android:versionCode="10"
+    android:versionName="1.0.9" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- ibeancon 需要蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 支持个推3.0 电子围栏功能 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 浮动通知权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 自定义权限 -->
+    <uses-permission android:name="getui.permission.GetuiService.com.chasedream.zhumeng" />
+    <!-- 替换为第三方应用的包名 -->
+    <permission
+        android:name="getui.permission.GetuiService.com.chasedream.zhumeng"
+        android:protectionLevel="normal" >
+    </permission>
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="23" />
+
+    <application
+        android:name="com.zozmom.Myapplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.zozmom.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Start" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" >
+                </action>
+
+                <category android:name="android.intent.category.LAUNCHER" >
+                </category>
+            </intent-filter>
+        </activity>
+
+        <!-- ping++ 适配以下 -->
+        <!-- Ping++ SDK -->
+        <!--
+              <activity
+            android:name="com.pingplusplus.android.PaymentActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        -->
+
+
+        <!-- 微信支付 -->
+        <!--
+             <activity-alias
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:targetActivity="com.pingplusplus.android.PaymentActivity" />
+        -->
+
+
+        <!-- ping++ 适配以上 -->
+        <!-- TalkingData 统计适配如下 -->
+   <!--      <meta-data
+            android:name="TD_APP_ID"
+            android:value="09F49061ED08750CF84EF74E561ECE6F" />
+        <meta-data
+            android:name="TD_CHANNEL_ID"
+            android:value="zozmom" /> -->
+        <!-- TalkingData 统计适配如下上 -->
+
+
+        <!-- 友盟适配 以下 -->
+
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.UMDefault" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5726ddac67e58eafab0020de" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="zozmombobo" />
+
+        <!-- 适配QQ  Qzone以下 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1105362336" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 适配QQ  Qzone以上 -->
+
+
+        <!-- 适配微信 以下 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 适配微信 以上 -->
+
+
+        <!-- 友盟适配 以上 -->
+        <!-- demo -->
+        <activity
+            android:name="com.zozmom.ui.DemoActivity"
+            android:screenOrientation="portrait" />
+        <!-- 首页 -->
+        <activity
+            android:name="com.zozmom.ui.IndexActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 网页 -->
+        <activity
+            android:name="com.zozmom.ui.BaseWebActivity"
+            android:screenOrientation="portrait" />
+        <!-- 随机数 -->
+        <activity
+            android:name="com.zozmom.ui.RandomActivity"
+            android:screenOrientation="portrait" />
+        <!-- 随机数 -->
+        <activity
+            android:name="com.zozmom.ui.user.ScenterBySdkActivity"
+            android:screenOrientation="portrait" />
+        <!-- 幸运网页 -->
+        <activity
+            android:name="com.zozmom.ui.user.FindWebActivity"
+            android:screenOrientation="portrait" />
+        <!-- 更新晒单 -->
+        <activity
+            android:name="com.zozmom.ui.SubmitShowUpdataActivity"
+            android:screenOrientation="portrait" />
+        <!-- 选择红包 -->
+        <activity
+            android:name="com.zozmom.ui.user.ChooseHongbaoActivity"
+            android:screenOrientation="portrait" />
+        <!-- 获取新手红包 -->
+        <activity
+            android:name="com.zozmom.ui.user.GetNewUserHongbao"
+            android:screenOrientation="portrait" />
+        <!-- 我的佣金 -->
+        <activity
+            android:name="com.zozmom.ui.user.CommissionActivity"
+            android:screenOrientation="portrait" />
+        <!-- 佣金记录 -->
+        <activity
+            android:name="com.zozmom.ui.user.CommRecordActivity"
+            android:screenOrientation="portrait" />
+        <!-- 兑换佣金成功失败 -->
+        <activity
+            android:name="com.zozmom.ui.user.ExchangestatusActivity"
+            android:screenOrientation="portrait" />
+        <!-- 晒单 -->
+        <activity
+            android:name="com.zozmom.ui.ShowActivity"
+            android:screenOrientation="portrait" />
+        <!-- 多选图片 -->
+        <activity
+            android:name="com.zozmom.ui.SelectPictureActivity"
+            android:screenOrientation="portrait" />
+        <!-- 限购专区 -->
+        <activity
+            android:name="com.zozmom.ui.ReActivity"
+            android:screenOrientation="portrait" />
+        <!-- 专区 -->
+        <activity
+            android:name="com.zozmom.ui.CmmDisActivity"
+            android:screenOrientation="portrait" />
+        <!-- 商品分类 -->
+        <activity
+            android:name="com.zozmom.ui.GdClsActivity"
+            android:screenOrientation="portrait" />
+        <!-- 登录界面 -->
+        <activity
+            android:name="com.zozmom.ui.LoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!-- 注册界面 -->
+        <activity
+            android:name="com.zozmom.ui.LoginByAccountActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!-- 商品详情 -->
+        <activity
+            android:name="com.zozmom.ui.GoodMessageActivity"
+            android:screenOrientation="portrait" />
+        <!-- 开奖的商品 或者正在开奖的商品详情 -->
+        <activity
+            android:name="com.zozmom.ui.OpeningGoodMessageActivity"
+            android:screenOrientation="portrait" />
+        <!-- 提交订单 -->
+        <activity
+            android:name="com.zozmom.ui.SubmitActivity"
+            android:screenOrientation="portrait" />
+        <!-- 商品分类详情 -->
+        <activity
+            android:name="com.zozmom.ui.CmmCftionActivity"
+            android:screenOrientation="portrait" />
+        <!-- 退出页面 -->
+        <activity
+            android:name="com.zozmom.ui.ExitLoginActivity"
+            android:screenOrientation="portrait" />
+        <!-- 计算页面 -->
+        <activity
+            android:name="com.zozmom.ui.ReckonActivity"
+            android:screenOrientation="portrait" />
+        <!-- 提交晒单 -->
+        <activity
+            android:name="com.zozmom.ui.SubmitShowActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 确定订单 -->
+        <activity
+            android:name="com.zozmom.ui.pay.ConfirmOrderActivity"
+            android:screenOrientation="portrait" />
+        <!-- 放弃订单 -->
+        <activity
+            android:name="com.zozmom.ui.pay.GiveupActivity"
+            android:screenOrientation="portrait" />
+        <!-- 支付页面 -->
+        <activity
+            android:name="com.zozmom.ui.pay.PayActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 支付成功页面 -->
+        <activity
+            android:name="com.zozmom.ui.pay.PaysucessActivity"
+            android:screenOrientation="portrait" />
+        <!-- 充值页面 -->
+        <activity
+            android:name="com.zozmom.ui.pay.RechargeActivity"
+            android:screenOrientation="portrait" />
+        <!-- 充值成功页面 -->
+        <activity
+            android:name="com.zozmom.ui.pay.RechargesucessActivity"
+            android:screenOrientation="portrait" />
+        <!-- 消费明细页面 -->
+        <activity
+            android:name="com.zozmom.ui.user.AccountActivity"
+            android:screenOrientation="portrait" />
+        <!-- 添加地址页面 -->
+        <activity
+            android:name="com.zozmom.ui.user.AddaddressActivity"
+            android:screenOrientation="portrait" />
+        <!-- 地址管理页面 -->
+        <activity
+            android:name="com.zozmom.ui.user.AddressManagerActivity"
+            android:screenOrientation="portrait" />
+        <!-- 修改昵称页面 -->
+        <activity
+            android:name="com.zozmom.ui.user.AlterNameActivity"
+            android:screenOrientation="portrait" />
+        <!-- 修改密码页面 -->
+        <activity
+            android:name="com.zozmom.ui.user.AlterPwdActivity"
+            android:screenOrientation="portrait" />
+        <!-- 城市区3级页面 -->
+        <activity
+            android:name="com.zozmom.ui.user.CityPickerActivity"
+            android:screenOrientation="portrait" />
+        <!-- 退出地址编辑页面 -->
+        <activity
+            android:name="com.zozmom.ui.user.ExitAdsActivity"
+            android:screenOrientation="portrait" />
+        <!-- 输入邀请码页面 -->
+        <activity
+            android:name="com.zozmom.ui.user.InputCodeActivity"
+            android:screenOrientation="portrait" />
+        <!-- 消息中心页面 -->
+        <activity
+            android:name="com.zozmom.ui.user.McActivity"
+            android:screenOrientation="portrait" />
+        <!-- 消息中心页面 -->
+        <activity
+            android:name="com.zozmom.ui.user.MessageCenterActivity"
+            android:screenOrientation="portrait" />
+        <!-- 系统消息页面 -->
+        <activity
+            android:name="com.zozmom.ui.user.MessageSysActivity"
+            android:screenOrientation="portrait" />
+        <!-- 他人个人中心页面 -->
+        <activity
+            android:name="com.zozmom.ui.user.OtherUserCenterActivity"
+            android:screenOrientation="portrait" />
+        <!-- 客服中心页面 -->
+        <activity
+            android:name="com.zozmom.ui.user.ScenterActivity"
+            android:screenOrientation="portrait" />
+        <!-- 设置中心页面 -->
+        <activity
+            android:name="com.zozmom.ui.user.SetupActivity"
+            android:screenOrientation="portrait" />
+        <!-- 实现的梦想页面 -->
+        <activity
+            android:name="com.zozmom.ui.user.UserCtrueActivity"
+            android:screenOrientation="portrait" />
+        <!-- 逐梦记录页面 -->
+        <activity
+            android:name="com.zozmom.ui.user.UserDreamActivity"
+            android:screenOrientation="portrait" />
+        <!-- 我的红包页面 -->
+        <activity
+            android:name="com.zozmom.ui.user.UserHongbaoActivity"
+            android:screenOrientation="portrait" />
+        <!-- 个人资料页面 -->
+        <activity
+            android:name="com.zozmom.ui.user.UserManagementActivity"
+            android:screenOrientation="portrait" />
+        <!-- 我的晒单页面 -->
+        <activity
+            android:name="com.zozmom.ui.user.UserShowActivity"
+            android:screenOrientation="portrait" />
+        <!-- 图片详情 -->
+        <activity
+            android:name="com.zozmom.ui.ImagePagerActivity"
+            android:screenOrientation="portrait" />
+        <!-- 往期揭晓 -->
+        <activity
+            android:name="com.zozmom.ui.PastActivity"
+            android:screenOrientation="portrait" />
+        <!-- 单个商品晒单列表 -->
+        <activity
+            android:name="com.zozmom.ui.ShowProductActivity"
+            android:screenOrientation="portrait" />
+        <!-- 选择地址 -->
+        <activity
+            android:name="com.zozmom.ui.user.ChooseAdressActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 个推SDK配置开始 -->
+        <!-- 配置的第三方参数属性 -->
+        <meta-data
+            android:name="PUSH_APPID"
+            android:value="8LJElb2cuq9fpRfGf2LMl5" />
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="2h6ePrOjQH69ImbStXbzx1" />
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="1OtSlksgZQA2XVE6dLp9a5" />
+        <!-- 配置第三方Receiver -->
+        <receiver
+            android:name="com.zozmom.PushTestReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.8LJElb2cuq9fpRfGf2LMl5" />
+            </intent-filter>
+        </receiver>
+        <!-- 配置SDK核心服务 -->
+        <service
+            android:name="com.igexin.sdk.PushService"
+            android:exported="true"
+            android:label="NotificationCenter"
+            android:process=":pushservice" />
+        <service
+            android:name="com.igexin.sdk.PushServiceUser"
+            android:exported="true"
+            android:label="NotificationCenterUser" />
+
+        <receiver android:name="com.igexin.sdk.PushReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.igexin.sdk.action.refreshls" />
+                <!-- 以下三项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.igexin.sdk.PushManagerReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.pushmanager" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.igexin.sdk.PushActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.igexin.sdk.GActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name="com.igexin.download.DownloadService"
+            android:process=":pushservice" />
+
+        <receiver android:name="com.igexin.download.DownloadReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.igexin.download.DownloadProvider"
+            android:authorities="downloads.com.chasedream.zhumeng"
+            android:exported="true"
+            android:process=":pushservice" />
+
+        <activity
+            android:name="com.igexin.getuiext.activity.GetuiExtActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="android.task.myServicetask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver
+            android:name="com.igexin.getuiext.service.PayloadReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
+                <action android:name="com.igexin.sdk.action.8LJElb2cuq9fpRfGf2LMl5" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.igexin.getuiext.service.GetuiExtService"
+            android:process=":pushservice" />
+        <!-- 个推SDK配置结束 -->
+
+        <activity
+            android:name="com.sobot.chat.activity.SobotChatActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.sobot.chat.activity.SobotPhotoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sobot.chat.activity.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.sobot.chat.activity.DCRCActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sobot_dialog_dcrc"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.sobot.chat.activity.SobotSkillGroupActivity"
+            android:theme="@style/sobot_dialog_skill" />
+        <activity
+            android:name="com.sobot.chat.activity.SobotPostMsgActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 内存排查 以下 -->
+
+
+        <!--
+        <service
+            android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"
+            android:enabled="false"
+            android:process=":leakcanary" />
+        <service
+            android:name="com.squareup.leakcanary.DisplayLeakService"
+            android:enabled="false" />
+
+        <activity
+            android:name="com.squareup.leakcanary.internal.DisplayLeakActivity"
+            android:enabled="false"
+            android:icon="@drawable/__leak_canary_icon"
+            android:label="@string/__leak_canary_display_activity_label"
+            android:taskAffinity="com.squareup.leakcanary"
+            android:theme="@style/__LeakCanary.Base" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+        <!-- 内存排查 以上 -->
+
+
+        <!-- 爱贝支付以下 -->
+
+
+        <!-- 微支付SDK界面 -->
+        <!-- 登录界面 -->
+        <activity
+            android:name="com.iapppay.account.channel.ipay.ui.LoginActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- 注册界面 -->
+        <activity
+            android:name="com.iapppay.account.channel.ipay.ui.RegistActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- 注册界面 》设置登录支付密码 -->
+        <activity
+            android:name="com.iapppay.account.channel.ipay.ui.RegSetPwdActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- 显示网页界面 -->
+        <activity
+            android:name="com.iapppay.account.channel.ipay.ui.WebActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.iapppay.ui.activity.AccountCheckPasswordActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.iapppay.pay.channel.weixinpay.WeixinWapPayActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.iapppay.ui.activity.AccountModifyPasswordActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.iapppay.ui.activity.AccountSmallAmountPasswordActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.iapppay.ui.activity.AccountSmallAmountValueActivty"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.iapppay.ui.activity.ServiceCenterActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.iapppay.ui.activity.AccountBindActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.iapppay.fastpay.ui.InputBankCarNoActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.iapppay.fastpay.ui.InputBankCarMoreInfoActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.iapppay.fastpay.ui.VerificationCodeActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.iapppay.fastpay.ui.CommonWebActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <!-- 收银台-普通 -->
+        <activity
+            android:name="com.iapppay.ui.activity.normalpay.PayHubActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        
+        		<!-- 财付通wap start-->
+		<activity
+            android:name="com.iapppay.pay.channel.tenpay.wap.TenpayWapPayActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.iapppay.pay.channel.tenpay.wap.WebActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- 财付通wap end-->
+        
+        <!-- 爱贝支付以上 -->
+    </application>
+
+</manifest>

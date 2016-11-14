@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y31"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/x12" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="持卡人姓名"
+            android:textColor="@color/me_textcolor"
+            android:textSize="@dimen/sizefour" />
+
+        <EditText
+            android:id="@+id/bankuser_nameView"
+            android:layout_width="@dimen/x218"
+            android:layout_height="@dimen/y21"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x20"
+            android:background="@drawable/btn_ac"
+            android:hint="请输入姓名"
+            android:inputType="text"
+            android:paddingLeft="@dimen/x10"
+            android:textColorHint="@color/edit_gb1"
+            android:textSize="@dimen/sizefour" />
+    </LinearLayout>
+
+    <include layout="@layout/line_h" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y31"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/x12" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="银行卡卡号"
+            android:textColor="@color/me_textcolor"
+            android:textSize="@dimen/sizefour" />
+
+        <EditText
+            android:id="@+id/bank_num_view"
+            android:layout_width="@dimen/x218"
+            android:layout_height="@dimen/y21"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x20"
+            android:background="@drawable/btn_ac"
+            android:hint="请输入银行卡卡号"
+            android:inputType="number"
+            android:paddingLeft="@dimen/x10"
+            android:textColorHint="@color/edit_gb1"
+            android:textSize="@dimen/sizefour" />
+    </LinearLayout>
+
+    <include layout="@layout/line_h" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y31"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/x12" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="开户行名称"
+            android:textColor="@color/me_textcolor"
+            android:textSize="@dimen/sizefour" />
+
+        <EditText
+            android:id="@+id/bank_name_view"
+            android:layout_width="@dimen/x218"
+            android:layout_height="@dimen/y21"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x20"
+            android:background="@drawable/btn_ac"
+            android:hint="请输入开户行名称"
+            android:inputType="text"
+            android:paddingLeft="@dimen/x10"
+            android:textColorHint="@color/edit_gb1"
+            android:textSize="@dimen/sizefour" />
+    </LinearLayout>
+
+    <include layout="@layout/line_h" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y31"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/x12" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="开户行支行"
+            android:textColor="@color/me_textcolor"
+            android:textSize="@dimen/sizefour" />
+
+        <EditText
+            android:id="@+id/bank_second_view"
+            android:layout_width="@dimen/x218"
+            android:layout_height="@dimen/y21"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x20"
+            android:background="@drawable/btn_ac"
+            android:hint="请输入开户行支行"
+            android:inputType="text"
+            android:paddingLeft="@dimen/x10"
+            android:textColorHint="@color/edit_gb1"
+            android:textSize="@dimen/sizefour" />
+    </LinearLayout>
+
+    <include layout="@layout/line_h" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y31"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/x12" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="目前支持的银行"
+            android:textColor="@color/me_textcolor"
+            android:textSize="@dimen/sizefour"
+            android:visibility="gone" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x20"
+            android:background="@null"
+            android:hint="点击查看"
+            android:textColor="@color/see_more"
+            android:textSize="@dimen/sizefour"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <include layout="@layout/line_h" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y31"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/x12" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="提现金额"
+            android:textColor="@color/me_textcolor"
+            android:textSize="@dimen/sizefour" />
+
+        <EditText
+            android:id="@+id/coin_view"
+            android:layout_width="@dimen/x218"
+            android:layout_height="@dimen/y21"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x20"
+            android:background="@drawable/btn_ac"
+            android:hint="只能提现100的整数"
+            android:inputType="number"
+            android:paddingLeft="@dimen/x10"
+            android:textColorHint="@color/edit_gb1"
+            android:textSize="@dimen/sizefour" />
+    </LinearLayout>
+
+    <include layout="@layout/line_h" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/x12"
+        android:layout_marginTop="@dimen/y11"
+        android:gravity="center"
+        android:text="注:提现金额至少100元人民币\n1佣金=1人民币"
+        android:textColor="@color/me_textcolor"
+        android:textSize="@dimen/sizefour" />
+
+    <Button
+        android:id="@+id/tixian_btn"
+        android:layout_width="@dimen/x296"
+        android:layout_height="@dimen/y25"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/y10"
+        android:background="@drawable/btn_background_yellow"
+        android:gravity="center"
+        android:text="提现"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sizeseven" />
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/x12"
+        android:layout_marginRight="@dimen/x12"
+        android:background="@color/white" >
+
+        <TextView
+            android:id="@+id/message_center_list_item_dataview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y16"
+            android:background="@color/activity_bg"
+            android:gravity="center"
+            android:text="2016/05/06"
+            android:textColor="@color/good_message_textcolors"
+            android:textSize="@dimen/sizefour" />
+
+        <ImageView
+            android:id="@+id/message_center_list_item_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y78"
+            android:layout_below="@+id/message_center_list_item_dataview"
+            android:scaleType="centerCrop"
+            android:src="@drawable/indeximg3" />
+
+        <TextView
+            android:id="@+id/message_center_list_item_contentview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/message_center_list_item_imageview"
+            android:layout_marginLeft="@dimen/x7"
+            android:layout_marginTop="@dimen/x7"
+            android:text="铁哥们,好姐妹!!一起去逐梦!!"
+            android:textColor="@color/good_message_textcolors"
+            android:textSize="@dimen/sizefour" />
+
+        <Button
+            android:id="@+id/message_center_list_item_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/message_center_list_item_contentview"
+            android:layout_marginBottom="@dimen/y4"
+            android:layout_marginRight="@dimen/x7"
+            android:layout_marginTop="@dimen/x7"
+            android:background="@drawable/item_selector"
+            android:onClick="onClick"
+            android:text="查看详情>"
+            android:textColor="@color/background"
+            android:textSize="@dimen/sizefour" />
+    </RelativeLayout>
+
+</LinearLayout>

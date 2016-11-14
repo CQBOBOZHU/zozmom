@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/item_selector"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/y3"
+        android:paddingTop="@dimen/y3" >
+
+        <RelativeLayout
+            android:id="@+id/ct_dil"
+            android:layout_width="@dimen/y53"
+            android:layout_height="@dimen/y53"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x12" >
+
+            <ImageView
+                android:id="@+id/user_getdream_picimageview"
+                android:layout_width="@dimen/y53"
+                android:layout_height="@dimen/y53"
+                android:src="@drawable/pic_loading"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/user_getdream_disimageview"
+                android:layout_width="@dimen/y18"
+                android:layout_height="@dimen/y18"
+                android:src="@drawable/ten_yuan"
+                android:visibility="gone"
+                android:scaleType="centerCrop" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/user_getdream_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_marginRight="@dimen/x12"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_toLeftOf="@+id/user_daibtn"
+            android:layout_toRightOf="@+id/ct_dil"
+            android:maxLines="2"
+            android:minLines="2"
+            android:textColor="@color/index_btn"
+            android:textSize="@dimen/sizefour" />
+
+        <Button
+            android:id="@+id/user_daibtn"
+            android:layout_width="@dimen/x60"
+            android:layout_height="@dimen/y14"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x12"
+            android:layout_marginTop="@dimen/x10"
+            android:focusable="false"
+            android:background="@drawable/btn_ground_co_gray"
+            android:textColor="@color/good_message_textcolors"
+            android:textSize="@dimen/sizetwo" />
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_getdream_name_tv"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_marginTop="@dimen/y3"
+            android:layout_toRightOf="@+id/ct_dil"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:lines="1"
+                android:text="期号: "
+                android:textColor="@color/grid_text_color"
+                android:textSize="@dimen/x12" />
+
+            <TextView
+                android:id="@+id/user_getdream_value_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:lines="1"
+                android:textColor="@color/background"
+                android:textSize="@dimen/x12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:lines="1"
+                android:text="期"
+                android:textColor="@color/grid_text_color"
+                android:textSize="@dimen/sizetwo" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/user_getdream_need_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout1"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_marginTop="@dimen/y3"
+            android:layout_toRightOf="@+id/ct_dil"
+            android:gravity="center"
+            android:lines="1"
+            android:text="已参与人次"
+            android:textColor="@color/grid_text_color"
+            android:textSize="@dimen/sizetwo" />
+
+        <Button
+            android:id="@+id/see_wuliuview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/layout1"
+            android:layout_marginRight="@dimen/x12"
+            android:layout_marginTop="@dimen/y4"
+            android:background="@null"
+            android:drawablePadding="@dimen/x7"
+            android:drawableRight="@drawable/take_on"
+            android:text="查看物流信息"
+            android:textColor="@color/grid_text_color"
+            android:textSize="@dimen/sizetwo"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/wuliu_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x86"
+        android:layout_marginRight="@dimen/x12"
+        android:background="@drawable/list_item"
+        android:lineSpacingExtra="@dimen/y3"
+        android:paddingBottom="@dimen/y6"
+        android:paddingLeft="@dimen/x7"
+        android:paddingRight="@dimen/x7"
+        android:paddingTop="@dimen/y3"
+        android:textColor="@color/grid_text_color"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/finish_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x3"
+        android:gravity="clip_vertical"
+        android:paddingBottom="@dimen/y3" >
+
+        <TextView
+            android:id="@+id/user_dream_getuserview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x12"
+            android:lines="1"
+            android:text="幸运逐梦码:"
+            android:textColor="@color/grid_text_color"
+            android:textSize="@dimen/sizefour" />
+
+        <Button
+            android:id="@+id/user_getdream_btn"
+            android:layout_width="@dimen/x71"
+            android:layout_height="@dimen/y18"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x12"
+            android:background="@drawable/btn_background_yellow"
+            android:focusable="false"
+            android:lines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizetwo" />
+    </RelativeLayout>
+
+</LinearLayout>

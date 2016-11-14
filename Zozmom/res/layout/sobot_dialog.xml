@@ -1,0 +1,195 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="fill_parent"
+    android:background="@drawable/sobot_bg_middle_custom_dialog1"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/sobot_relative"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:minHeight="@dimen/sobot_DIMEN_276PX"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/sobot_center_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/sobot_DIMEN_48PX"
+            android:text="是否解决了您的问题?"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <RatingBar
+            android:id="@+id/sobot_ratingBar"
+            style="@style/sobot_roomRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/sobot_DIMEN_13PX"
+            android:numStars="5"
+            android:stepSize="1" />
+
+        <RelativeLayout
+            android:id="@+id/sobot_robot"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sobot_DIMEN_48PX"
+            android:gravity="center" >
+
+            <RadioGroup
+                android:id="@+id/sobot_readiogroup"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+            <RadioButton
+                android:button="@null"
+                android:id="@+id/sobot_btn_ok_robot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sobot_dialog_button_yes_selector" />
+
+            <RadioButton
+                android:button="@null"
+                android:id="@+id/sobot_btn_no_robot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/sobot_btn_ok_robot"
+                android:layout_marginLeft="70dp"
+                android:layout_toRightOf="@+id/sobot_btn_ok_robot"
+                android:background="@drawable/sobot_dialog_button_no_selector" />
+            </RadioGroup>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sobot_hide_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:text="是否有以下情况？"
+            android:layout_height="wrap_content"/>
+
+        <GridView
+            android:id="@+id/gv_demo"
+            android:layout_width="@dimen/sobot_DIMEN_552PX"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:cacheColorHint="@android:color/transparent"
+            android:fadingEdge="none"
+            android:gravity="center_horizontal"
+            android:horizontalSpacing="5dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="2"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp" >
+        </GridView>
+
+        <EditText
+            android:id="@+id/sobot_add_content"
+            android:layout_width="@dimen/sobot_DIMEN_552PX"
+            android:layout_height="@dimen/sobot_DIMEN_168PX"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/sobot_DIMEN_36PX"
+            android:background="@drawable/sobot_edittext_shape"
+            android:enabled="true"
+            android:gravity="top"
+            android:hint="@string/sobot_edittext_hint"
+            android:textColorHint="#cecece"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:minLines="4"
+            android:padding="@dimen/sobot_DIMEN_10PX"
+            android:scrollbars="vertical"
+            android:textSize="12sp" >
+        </EditText>
+
+        <Button
+            android:id="@+id/sobot_btn_submit"
+            android:layout_width="@dimen/sobot_DIMEN_432PX"
+            android:layout_height="@dimen/sobot_DIMEN_84PX"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/sobot_DIMEN_60PX"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/sobot_subbutton_shap_selector"
+            android:text="@string/sobot_btn_submit_text"
+            android:textColor="@color/sobot_btn_text_color"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginTop="10dp"
+        android:background="#b5b5b5" />
+
+    <LinearLayout
+        android:id="@+id/sobot_button_style"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sobot_DIMEN_120PX"
+        android:background="@drawable/sobot_bg_bottom_custom_dialog"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <Button
+            android:id="@+id/sobot_close_now"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@null"
+            android:singleLine="true"
+            android:text="@string/sobot_button_cancel1"
+            android:textColor="@color/sobot_color"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="50dp"
+            android:background="#b5b5b5" />
+
+        <Button
+            android:id="@+id/sobot_negativeButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@null"
+            android:singleLine="true"
+            android:text="@string/sobot_cancel"
+            android:textColor="@color/sobot_color"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/sobot_negativeButton1"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@null"
+        android:singleLine="true"
+        android:text="@string/sobot_cancel"
+        android:textColor="@color/sobot_color"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+</LinearLayout>

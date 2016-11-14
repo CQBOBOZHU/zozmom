@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/stat_bar_white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/line"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y15"
+            android:orientation="vertical" >
+
+            <include layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y35"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/before_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:text="@string/oldpassword"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/index_btn"
+                    android:textSize="@dimen/sizefour" />
+
+                <EditText
+                    android:id="@+id/before_pwd_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x43"
+                    android:layout_toRightOf="@+id/before_pwd"
+                    android:background="@null"
+                    android:layout_toLeftOf="@+id/alter_forgetpwd_btn"
+                    android:hint="@string/oldpassword"
+                    android:inputType="textVisiblePassword"
+                    android:textColor="@color/index_btn"
+                    android:textColorHint="@color/before_btncolor"
+                    android:textSize="@dimen/sizefour" />
+
+                <Button
+                    android:id="@+id/alter_forgetpwd_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x19"
+                    android:background="@drawable/item_selector"
+                    android:text="@string/forgeted_password"
+                    android:onClick="onClick"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizefour" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y35"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/after_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:text="@string/newpwd"
+                     android:gravity="center_vertical"
+                    android:textColor="@color/index_btn"
+                    android:textSize="@dimen/sizefour" />
+
+                <EditText
+                    android:id="@+id/alter_newpwd_edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x43"
+                    android:layout_toRightOf="@+id/after_pwd"
+                    android:background="@null"
+                    android:hint="@string/newpassword"
+                    android:inputType="textPassword"
+                    android:textColor="@color/index_btn"
+                    android:textColorHint="@color/before_btncolor"
+                    android:textSize="@dimen/sizefour" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y35"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/after_pwd1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:text="@string/enter_newpwd"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/index_btn"
+                    android:textSize="@dimen/sizefour" />
+
+                <EditText
+                    android:id="@+id/alter_oncepwd_edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x29"
+                    android:layout_toRightOf="@+id/after_pwd1"
+                    android:background="@null"
+                    android:hint="@string/input_newpwd_again"
+                    android:inputType="textPassword"
+                    android:textColor="@color/index_btn"
+                    android:textColorHint="@color/before_btncolor"
+                    android:textSize="@dimen/sizefour" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h" />
+
+            <Button
+                android:id="@+id/alter_save_btn"
+                android:layout_width="@dimen/x297"
+                android:layout_height="@dimen/y22"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/y15"
+                android:background="@drawable/btn_background_yellow"
+                android:text="@string/save"
+                android:onClick="onClick"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sizesix" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

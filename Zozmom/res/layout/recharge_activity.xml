@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include layout="@layout/status_bar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y68"
+            android:background="@drawable/paybg"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:maxEms="15"
+                android:text="@string/recharge_hint"
+                android:textColor="@color/index_btn"
+                android:textSize="@dimen/sizefour" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_marginTop="@dimen/y8"
+            android:text="@string/choose_number_hint"
+            android:textColor="@color/index_btn"
+            android:textSize="@dimen/sizefour" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/recharge_onebtn"
+                android:layout_width="@dimen/x60"
+                android:layout_height="@dimen/y19"
+                android:layout_marginRight="@dimen/x35"
+                android:background="@drawable/recharge_check_btn_selected"
+                android:onClick="onClick"
+                android:text="10"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sizefour" />
+
+            <Button
+                android:id="@+id/recharge_twobtn"
+                android:layout_width="@dimen/x60"
+                android:layout_height="@dimen/y19"
+                android:layout_gravity="center"
+                android:background="@drawable/recharge_btn_bg"
+                android:onClick="onClick"
+                android:text="50"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizefour" />
+
+            <Button
+                android:id="@+id/recharge_threebtn"
+                android:layout_width="@dimen/x60"
+                android:layout_height="@dimen/y19"
+                android:layout_marginLeft="@dimen/x35"
+                android:background="@drawable/recharge_btn_bg"
+                android:onClick="onClick"
+                android:text="100"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizefour" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y16"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/recharge_fourbtn"
+                android:layout_width="@dimen/x60"
+                android:layout_height="@dimen/y19"
+                android:layout_marginRight="@dimen/x35"
+                android:background="@drawable/recharge_btn_bg"
+                android:onClick="onClick"
+                android:text="200"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizefour" />
+
+            <Button
+                android:id="@+id/recharge_fivebtn"
+                android:layout_width="@dimen/x60"
+                android:layout_height="@dimen/y19"
+                android:layout_gravity="center"
+                android:background="@drawable/recharge_btn_bg"
+                android:onClick="onClick"
+                android:text="500"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizefour" />
+
+            <Button
+                android:id="@+id/recharge_sixbtn"
+                android:layout_width="@dimen/x60"
+                android:layout_height="@dimen/y19"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/x35"
+                android:background="@drawable/recharge_btn_bg"
+                android:onClick="onClick"
+                android:text="1000"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizefour" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y19"
+            android:layout_marginTop="@dimen/y16"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/input_menoyview"
+                android:layout_width="@dimen/x250"
+                android:layout_height="match_parent"
+                android:background="@drawable/recharge_btn_bg"
+                android:gravity="center"
+                android:hint="在此可以输入其他金额"
+                android:inputType="number"
+                android:maxLength="10"
+                android:textColor="@color/good_message_textcolors"
+                android:textColorHint="@color/good_message_textcolors"
+                android:textSize="@dimen/sizefour" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_marginTop="@dimen/y8"
+            android:text="@string/choose_pay_hint"
+            android:textColor="@color/index_btn"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/pay_radbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/y45"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_marginTop="@dimen/y7"
+            android:background="@null"
+            android:drawableLeft="@drawable/ricle_yes"
+            android:drawablePadding="@dimen/x8"
+            android:onClick="onClick"
+            android:text="微信"
+            android:textColor="@color/good_message_textcolors"
+            android:textSize="@dimen/sizefour" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/recharge_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y35"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/recharge_todobtn"
+            android:layout_width="@dimen/x250"
+            android:layout_height="@dimen/y22"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_background_yellow"
+            android:onClick="onClick"
+            android:text="@string/go_recharge"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

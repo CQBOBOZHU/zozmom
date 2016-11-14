@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_selector"
+    android:descendantFocusability="blocksDescendants" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y52" >
+        
+
+        <TextView
+            android:id="@+id/list_cmm_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/x12"
+            android:layout_marginTop="@dimen/y3"
+            android:layout_marginLeft="@dimen/x7"
+            android:layout_toLeftOf="@+id/list_cmm_add"
+            android:layout_toRightOf="@+id/list_cmm_imageview"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:minLines="2"
+            android:textColor="@color/index_btn"
+            android:textSize="@dimen/sizefour" />
+
+        <Button
+            android:id="@+id/list_cmm_add"
+            android:layout_width="@dimen/x47"
+            android:layout_height="@dimen/x47"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x12"
+            android:background="@drawable/circle_btn_focused"
+            android:focusable="false"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizesix" />
+
+        <ProgressBar
+            android:id="@+id/list_item_bar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="7dp"
+            android:layout_below="@+id/list_cmm_name"
+            android:layout_marginRight="@dimen/x14"
+            android:layout_marginTop="@dimen/y4"
+            android:layout_marginLeft="@dimen/x7"
+            android:layout_toLeftOf="@+id/list_cmm_add"
+            android:layout_toRightOf="@+id/list_cmm_imageview"
+            android:lines="1"
+            android:max="100"
+            android:progressDrawable="@drawable/progressbar" />
+
+        <ImageView
+            android:id="@+id/list_cmm_imageview"
+            android:layout_width="@dimen/y47"
+            android:layout_height="@dimen/y47"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x12"
+            android:focusable="false"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pic_loading" />
+
+        <TextView
+            android:id="@+id/list_count_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/list_item_bar"
+            android:layout_below="@+id/list_item_bar"
+            android:layout_marginTop="@dimen/y5"
+            android:lines="1"
+            android:text="剩余:"
+            android:textColor="@color/good_message_textcolors"
+            android:textSize="@dimen/sizetwo" />
+
+        <TextView
+            android:id="@+id/list_price_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/list_item_bar"
+            android:layout_below="@+id/list_item_bar"
+            android:layout_marginTop="@dimen/y5"
+            android:lines="1"
+            android:text="总需:"
+            android:textColor="@color/good_message_textcolors"
+            android:textSize="@dimen/sizetwo" />
+        
+        <ImageView 
+            android:id="@+id/dis_image"
+            android:layout_width="@dimen/y30"
+            android:layout_height="@dimen/y30"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

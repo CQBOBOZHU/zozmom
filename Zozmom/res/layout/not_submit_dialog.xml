@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/exit_layout"
+    android:layout_width="@dimen/x250"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/exit_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y50"
+        android:gravity="center"
+        android:text="亲,你还没有提交收货地址哦!"
+        android:textColor="@color/good_message_textcolors"
+        android:textSize="@dimen/sizeseven" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y40"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/exitBtn1"
+            android:layout_width="@dimen/x90"
+            android:layout_height="@dimen/y25"
+            android:layout_marginRight="@dimen/x20"
+            android:background="@drawable/btn_background_yellow"
+            android:gravity="center"
+            android:text="继续提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizesix" />
+
+        <Button
+            android:id="@+id/exitBtn0"
+            android:layout_width="@dimen/x90"
+            android:layout_height="@dimen/y25"
+            android:layout_marginLeft="@dimen/x20"
+            android:background="@drawable/btn_background_gray"
+            android:gravity="center"
+            android:text="不提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizesix" />
+    </LinearLayout>
+
+</LinearLayout>

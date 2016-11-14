@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/x223"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/button1"
+        android:layout_width="@dimen/x223"
+        android:layout_height="@dimen/y32"
+        android:layout_marginLeft="@dimen/x20"
+        android:background="@null"
+        android:gravity="left|center_vertical"
+        android:text="修改头像"
+        android:textColor="@color/index_btn"
+        android:textSize="20sp" />
+
+    <include layout="@layout/line_h" />
+
+    <Button
+        android:id="@+id/start_btn1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y32"
+        android:layout_marginLeft="@dimen/x20"
+        android:background="@null"
+        android:gravity="left|center_vertical"
+        android:text="相册"
+        android:textColor="@color/good_message_textcolors"
+        android:textSize="19sp" />
+
+    <include layout="@layout/line_h" />
+
+    <Button
+        android:id="@+id/start_btn2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y32"
+        android:layout_marginLeft="@dimen/x20"
+        android:background="@null"
+        android:gravity="left|center_vertical"
+        android:text="拍照"
+        android:textColor="@color/good_message_textcolors"
+        android:textSize="19sp" />
+
+</LinearLayout>

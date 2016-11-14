@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/sobot_DIMEN_26PX"
+            android:layout_marginTop="@dimen/sobot_DIMEN_26PX"
+            android:paddingLeft="@dimen/sobot_DIMEN_20PX"
+            android:paddingRight="@dimen/sobot_DIMEN_20PX" >
+
+            <com.sobot.chat.widget.BorderImageView
+                android:id="@+id/sobot_pic"
+                android:layout_width="@dimen/sobot_DIMEN_180PX"
+                android:layout_height="@dimen/sobot_DIMEN_180PX"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/sobot_DIMEN_26PX"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sobot_icon_consulting_default_pic" />
+
+            <TextView
+                android:id="@+id/sobot_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_toLeftOf="@+id/sobot_sendBtn"
+                android:layout_toRightOf="@+id/sobot_pic"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/sobot_DIMEN_12PX"
+                android:maxLines="3"
+                android:textColor="#676e6f"
+                android:textSize="@dimen/sobot_msg_text_size" />
+
+            <ImageView
+                android:id="@+id/sobot_sendBtn"
+                android:layout_width="@dimen/sobot_DIMEN_108PX"
+                android:layout_height="@dimen/sobot_DIMEN_108PX"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/sobot_DIMEN_36PX"
+                android:src="@drawable/sobot_icon_send_btn_selector" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

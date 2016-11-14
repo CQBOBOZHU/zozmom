@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/user_getdream_picimageview"
+            android:layout_width="@dimen/y44"
+            android:layout_height="@dimen/y53"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_marginTop="@dimen/y3"
+            android:scaleType="fitXY"
+            android:src="@drawable/pic_loading" />
+
+        <TextView
+            android:id="@+id/user_getdream_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_marginRight="@dimen/x12"
+            android:layout_marginTop="@dimen/x13"
+            android:layout_toLeftOf="@+id/user_daibtn"
+            android:layout_toRightOf="@+id/user_getdream_picimageview"
+            android:maxLines="2"
+            android:minLines="2"
+            android:text="苹果（Apple）iPhone 6 Plus 64G版 4G手机"
+            android:textColor="@color/index_btn"
+            android:textSize="@dimen/sizefour" />
+
+        <Button
+            android:id="@+id/user_daibtn"
+            android:layout_width="@dimen/x44"
+            android:layout_height="@dimen/y14"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x12"
+            android:layout_marginTop="@dimen/x13"
+            android:background="@drawable/btn_ground_co_gray"
+            android:text="待收货"
+            android:textColor="@color/good_message_textcolors"
+            android:textSize="@dimen/sizetwo" />
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_getdream_name_tv"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_marginTop="@dimen/y4"
+            android:layout_toRightOf="@+id/user_getdream_picimageview"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:lines="1"
+                android:text="期号: "
+                android:textColor="@color/grid_text_color"
+                android:textSize="@dimen/x12" />
+
+            <TextView
+                android:id="@+id/user_getdream_value_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:lines="1"
+                android:text="3222"
+                android:textColor="@color/background"
+                android:textSize="@dimen/x12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:lines="1"
+                android:text="期"
+                android:textColor="@color/grid_text_color"
+                android:textSize="@dimen/sizetwo" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/user_getdream_need_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout1"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_marginTop="@dimen/y4"
+            android:layout_toRightOf="@+id/user_getdream_picimageview"
+            android:gravity="center"
+            android:lines="1"
+            android:text="已参与246人次"
+            android:textColor="@color/grid_text_color"
+            android:textSize="@dimen/sizetwo" />
+
+        <Button
+            android:id="@+id/user_getdreambtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/layout1"
+            android:layout_marginRight="@dimen/x24"
+            android:layout_marginTop="@dimen/y4"
+            android:background="@null"
+            android:drawableRight="@drawable/take_on"
+            android:focusable="false"
+            android:text="查看号码"
+            android:textColor="@color/grid_text_color"
+            android:textSize="@dimen/sizetwo" />
+
+        <RelativeLayout
+            android:id="@+id/user_getdream_lucknumberlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_getdream_need_textview"
+            android:layout_marginRight="@dimen/x24"
+            android:layout_marginTop="@dimen/y5"
+            android:layout_toRightOf="@+id/user_getdream_picimageview"
+            android:background="@drawable/list_item_bg"
+            android:numColumns="3" 
+            android:visibility="gone"
+            >
+
+            <com.zozmom.cuview.CuGridView
+                android:id="@+id/user_getdream_CuGridView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/y6"
+                android:descendantFocusability="blocksDescendants"
+                android:gravity="center"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:verticalSpacing="@dimen/y8" />
+
+            <Button
+                android:id="@+id/f_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/user_getdream_CuGridView"
+                android:layout_below="@+id/user_getdream_CuGridView"
+                android:layout_marginBottom="@dimen/y10"
+                android:layout_marginLeft="@dimen/x25"
+                android:layout_marginTop="@dimen/y9"
+                android:background="@drawable/item_selector"
+                android:gravity="center"
+                android:text="上一页"
+                android:textColor="@color/before_btncolor"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/next_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/user_getdream_CuGridView"
+                android:layout_below="@+id/user_getdream_CuGridView"
+                android:layout_marginBottom="@dimen/y10"
+                android:layout_marginRight="@dimen/x25"
+                android:layout_marginTop="@dimen/y9"
+                android:background="@drawable/item_selector"
+                android:gravity="center"
+                android:text="下一页"
+                android:textColor="@color/before_btncolor"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/finish_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y5"
+        android:layout_marginTop="@dimen/x11"
+        android:gravity="clip_vertical" >
+
+        <TextView
+            android:id="@+id/user_dream_getuserview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x12"
+            android:lines="1"
+            android:text="获奖者: 你大爷今夜不吃饭"
+            android:textColor="@color/grid_text_color"
+            android:textSize="@dimen/sizefour" />
+
+        <Button
+            android:id="@+id/user_getdream_btn"
+            android:layout_width="@dimen/x71"
+            android:layout_height="@dimen/y18"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x24"
+            android:background="@drawable/btn_background_yellow"
+            android:focusable="false"
+            android:lines="1"
+            android:text="晒单"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizetwo" />
+    </RelativeLayout>
+
+</LinearLayout>

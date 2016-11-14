@@ -1,0 +1,12 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+   
+    <item android:id="@android:id/secondaryProgress">
+        <shape>
+            <corners android:radius="7dp" />
+
+            <solid android:color="@color/up_ver" />
+        </shape>
+    </item>
+  
+</layer-list>

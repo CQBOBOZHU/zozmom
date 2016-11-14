@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/exit_layout"
+    android:layout_width="@dimen/x223"
+    android:layout_height="@dimen/y91"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/exit_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y25"
+        android:gravity="center_horizontal"
+        android:text="确定退出逐梦?"
+        android:textColor="@color/index_btn"
+        android:textSize="@dimen/sizesix" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y19"
+        android:layout_marginTop="@dimen/y15"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/exitBtn0"
+            android:layout_width="@dimen/x73"
+            android:layout_height="@dimen/y19"
+            android:layout_marginRight="@dimen/x20"
+            android:background="@drawable/btn_background_yellow"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizefour" />
+
+        <Button
+            android:id="@+id/exitBtn1"
+            android:layout_width="@dimen/x73"
+            android:layout_height="@dimen/y19"
+            android:layout_marginLeft="@dimen/x20"
+            android:background="@drawable/btn_background_d7"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizefour" />
+    </LinearLayout>
+
+</LinearLayout>

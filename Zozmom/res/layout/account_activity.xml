@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/stat_bar_white" />
+
+    <include layout="@layout/line_h" />
+
+    <include
+        android:id="@+id/notloginview"
+        layout="@layout/warn_user_login"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y44"
+        android:background="@color/background" >
+
+        <TextView
+            android:id="@+id/zhumengview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x20"
+            android:text="逐梦币:"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizeeight" />
+
+        <TextView
+            android:id="@+id/usergd_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/zhumengview"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizeeight" />
+
+        <Button
+            android:layout_width="@dimen/x65"
+            android:layout_height="@dimen/y19"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x20"
+            android:background="@drawable/btn_background_yellow_white"
+            android:onClick="toRecharge"
+            android:text="充值"
+            android:textColor="@color/background"
+            android:textSize="@dimen/sizefive" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y25"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/pay_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="充值明细"
+            android:textColor="@color/background"
+            android:textSize="@dimen/sizesix" />
+
+        <Button
+            android:id="@+id/consumer_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="消费明细"
+            android:textColor="@color/index_btn"
+            android:textSize="@dimen/sizesix" />
+    </LinearLayout>
+
+    <include layout="@layout/line_h" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/account_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>

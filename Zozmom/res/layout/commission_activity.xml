@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/stat_bar_white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y25"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/background"
+         >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="总佣金"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizeseven" />
+
+        <TextView
+            android:id="@+id/commission_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/x12"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="￥"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizeseven" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y25"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bedream_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/y25"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:onClick="viewpage1"
+            android:text="兑换逐梦币"
+            android:textColor="@color/background"
+            android:textSize="@dimen/sizeeight" />
+
+        <Button
+            android:id="@+id/tixian_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/y25"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:onClick="viewpage2"
+            android:text="提现"
+            android:textColor="@color/index_btn"
+            android:textSize="@dimen/sizeeight" />
+    </LinearLayout>
+
+    <include layout="@layout/line_h" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/commossion_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

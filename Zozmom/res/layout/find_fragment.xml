@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical"
+    android:splitMotionEvents="false"
+    android:weightSum="1" >
+
+    <include layout="@layout/status_bar" />
+
+    <RelativeLayout
+        android:id="@+id/newuserlay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y41"
+        android:layout_marginTop="@dimen/y10"
+        android:background="@drawable/item_selector"
+        android:onClick="openDialog" >
+
+        <ImageView
+            android:id="@+id/newuser_imgview"
+            android:layout_width="@dimen/y35"
+            android:layout_height="@dimen/y35"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x12"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fu" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_toLeftOf="@+id/find_imview1"
+            android:layout_toRightOf="@+id/newuser_imgview"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新手红包"
+                android:textColor="@color/index_btn"
+                android:textSize="@dimen/sizefour" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y3"
+                android:lines="1"
+                android:text="送你个红包，愿你梦想成真。"
+                android:textColor="@color/before_btncolor"
+                android:textSize="@dimen/sizefour" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/find_imview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x12"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/forward" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_h" />
+
+    <RelativeLayout
+        android:id="@+id/boxuserlay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y41"
+        android:background="@drawable/item_selector" >
+
+        <ImageView
+            android:id="@+id/box_imgview"
+            android:layout_width="@dimen/y35"
+            android:layout_height="@dimen/y35"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x12"
+            android:scaleType="centerCrop"
+            android:src="@drawable/open_box" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_toLeftOf="@+id/box_imview1"
+            android:layout_toRightOf="@+id/box_imgview"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="疯狂开宝箱"
+                android:textColor="@color/index_btn"
+                android:textSize="@dimen/sizefour" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y3"
+                android:lines="1"
+                android:text="打开宝箱，惊喜在等你"
+                android:textColor="@color/before_btncolor"
+                android:textSize="@dimen/sizefour" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/box_imview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x12"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/forward" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_h" />
+
+    <RelativeLayout
+        android:id="@+id/findviewlay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y41"
+        android:background="@drawable/item_selector" >
+
+        <ImageView
+            android:id="@+id/find_imgview"
+            android:layout_width="@dimen/y35"
+            android:layout_height="@dimen/y35"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x12"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/circle_ic" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_toLeftOf="@+id/find_imview"
+            android:layout_toRightOf="@+id/find_imgview"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="幸运大转盘"
+                android:textColor="@color/index_btn"
+                android:textSize="@dimen/sizefour" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y3"
+                android:text="运气必须要!要的就是这个!"
+                android:textColor="@color/before_btncolor"
+                android:textSize="@dimen/sizefour" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/find_imview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x12"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/forward" />
+    </RelativeLayout>
+    <include layout="@layout/line_h" />
+
+    <RelativeLayout
+        android:id="@+id/findviewlay_dream"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y41"
+        android:background="@drawable/item_selector" >
+
+        <ImageView
+            android:id="@+id/find_imgview_dream"
+            android:layout_width="@dimen/y35"
+            android:layout_height="@dimen/y35"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x12"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/money_icon" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x12"
+            android:layout_toLeftOf="@+id/find_imview_dream"
+            android:layout_toRightOf="@+id/find_imgview_dream"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全民圆梦"
+                android:textColor="@color/index_btn"
+                android:textSize="@dimen/sizefour" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y3"
+                android:text="你圆梦，我买单！"
+                android:textColor="@color/before_btncolor"
+                android:textSize="@dimen/sizefour" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/find_imview_dream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x12"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/forward" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="1" >
+
+    <Button
+        android:id="@+id/dreambtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.2"
+        android:background="@null"
+        android:drawableTop="@drawable/dream_selected"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="@string/dream"
+        android:textColor="@color/background"
+        android:textSize="@dimen/sizetwo" />
+
+    <Button
+        android:id="@+id/the_newbtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.2"
+        android:background="@null"
+        android:drawableTop="@drawable/the_new"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="@string/the_new"
+        android:textColor="@color/good_message_textcolors"
+        android:textSize="@dimen/sizetwo" />
+
+    <Button
+        android:id="@+id/all_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.2"
+        android:background="@null"
+        android:drawableTop="@drawable/all"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="@string/all_goods"
+        android:textColor="@color/good_message_textcolors"
+        android:textSize="@dimen/sizetwo" />
+
+    <Button
+        android:id="@+id/shopping_carbtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.2"
+        android:background="@null"
+        android:drawableTop="@drawable/show"
+        android:onClick="onClick"
+        android:text="@string/openlist"
+        android:textColor="@color/good_message_textcolors"
+        android:textSize="@dimen/sizetwo" />
+
+    <Button
+        android:id="@+id/my_dreambtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.2"
+        android:background="@null"
+        android:drawableTop="@drawable/my_dream"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="@string/my_dream"
+        android:textColor="@color/good_message_textcolors"
+        android:textSize="@dimen/sizetwo" />
+
+</LinearLayout>

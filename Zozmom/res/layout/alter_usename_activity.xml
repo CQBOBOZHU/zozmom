@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line"
+    android:orientation="vertical" >
+
+    <include layout="@layout/stat_bar_white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y30"
+        android:layout_marginTop="@dimen/y14"
+        android:background="@color/white" >
+
+        <EditText
+            android:id="@+id/alter_name_editview"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x19"
+            android:layout_toLeftOf="@+id/alter_delete_btn"
+            android:background="@null"
+            android:lines="1"
+            android:maxLength="14"
+            android:inputType="text"
+            android:gravity="center_vertical"
+            android:textColor="@color/index_btn"
+            android:textSize="@dimen/sizesix" />
+
+        <ImageButton
+            android:id="@+id/alter_delete_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:onClick="onClick"
+            android:background="@null"
+            android:layout_marginRight="@dimen/x19"
+            android:src="@drawable/cicle_delete" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/alter_saveBtn"
+        android:layout_width="@dimen/x297"
+        android:layout_height="@dimen/y25"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y14"
+        android:background="@drawable/btn_background_yellow"
+        android:text="@string/save"
+        android:onClick="onClick"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sizesix" />
+
+</LinearLayout>

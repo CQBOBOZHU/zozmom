@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/sobot_ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/sobot_linearlayout_border"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/sobot_DIMEN_10PX" >
+
+        <!-- 转人工按钮 -->
+
+        <ImageButton
+            android:id="@+id/sobot_btn_set_mode_rengong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/sobot_DIMEN_36PX"
+            android:background="@drawable/sobot_manualwork_button_selector"
+            android:contentDescription="@null"
+            android:textColor="@color/sobot_bg_white"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <!--留言按钮-->
+        <ImageButton
+            android:id="@+id/sobot_btn_set_mode_leavemsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/sobot_DIMEN_36PX"
+            android:background="@drawable/sobot_leavemsg_button_selector"
+            android:contentDescription="@null"
+            android:textColor="@color/sobot_bg_white"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <!--留言按钮-->
+        <ImageButton
+            android:id="@+id/sobot_btn_post_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/sobot_DIMEN_36PX"
+            android:background="@drawable/sobot_button_chat_bottom_post_msg_selector"
+            android:contentDescription="@null"
+            android:textColor="@color/sobot_bg_white"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <!--从语音模式转到编辑模式-->
+        <ImageButton
+            android:id="@+id/sobot_btn_model_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/sobot_DIMEN_24PX"
+            android:background="@drawable/sobot_keyboard_button_selector"
+            android:contentDescription="@null"
+            android:visibility="gone" />
+
+        <!--从编辑模式转到语音模式-->
+        <ImageButton
+            android:id="@+id/sobot_btn_model_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/sobot_DIMEN_24PX"
+            android:background="@drawable/sobot_vioce_button_selector"
+            android:contentDescription="@null"
+            android:visibility="gone" />
+        <!-- 按住说话  start -->
+
+        <LinearLayout
+            android:id="@+id/sobot_btn_press_to_speak"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="@dimen/sobot_DIMEN_15PX"
+            android:layout_marginLeft="@dimen/sobot_DIMEN_26PX"
+            android:layout_marginRight="@dimen/sobot_DIMEN_12PX"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/sobot_chat_press_speak_btn"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/sobot_txt_speak_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/sobot_DIMEN_15PX"
+                android:gravity="center_vertical"
+                android:textColor="@color/sobot_color_bottom_btn_voice"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- 文本输入  start -->
+
+        <RelativeLayout
+            android:id="@+id/sobot_edittext_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/sobot_DIMEN_7PX"
+            android:layout_marginLeft="@dimen/sobot_DIMEN_12PX"
+            android:layout_marginRight="@dimen/sobot_DIMEN_12PX"
+            android:layout_weight="1"
+            android:gravity="bottom" >
+
+            <!-- 自定义的editText -->
+            <!-- com.sobot.chat.weight.PasteEditText -->
+
+            <com.sobot.chat.widget.ContainsEmojiEditText
+                android:id="@+id/sobot_et_sendmessage"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/sobot_DIMEN_15PX"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/sobot_button_style1"
+                android:maxLines="3"
+                android:minHeight="@dimen/sobot_DIMEN_96PX"
+                android:padding="5dp"
+                android:textSize="16sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+        <!-- 文本输入   end -->
+
+        <Button
+            android:id="@+id/sobot_btn_send"
+            android:layout_width="@dimen/sobot_DIMEN_107PX"
+            android:layout_height="@dimen/sobot_DIMEN_72PX"
+            android:layout_marginRight="@dimen/sobot_DIMEN_24PX"
+            android:background="@drawable/sobot_btn_sendmsg_selector"
+            android:visibility="gone" />
+
+        <!-- 加号按钮 -->
+
+        <ImageButton
+            android:id="@+id/sobot_btn_upload_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="@dimen/sobot_DIMEN_21PX"
+            android:background="@drawable/sobot_picture_button_selector"
+            android:contentDescription="@null"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!--点击加号按钮显示出来的图片、拍照、满意度界面-->
+    <LinearLayout
+        android:id="@+id/sobot_moreFunction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sobot_linearlayout_border"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="130dp"
+            android:layout_gravity="center_horizontal"
+            layout="@layout/sobot_upload_layout" />
+    </LinearLayout>
+
+    <!-- 开始新会话布局 -->
+
+    <LinearLayout
+        android:id="@+id/sobot_ll_restart_talk"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:background="@color/sobot_color_bottom_bg"
+        android:paddingTop="5dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/sobot_tv_satisfaction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/sobot_chat_bottom_selector"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/sobot_bottombar_satisfaction"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="@string/sobot_str_bottom_satisfaction"
+            android:textColor="@color/sobot_color_bottom_message"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/sobot_txt_restart_talk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/sobot_chat_bottom_selector"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/sobot_bottombar_conversation"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="@string/sobot_restart_talk"
+            android:textColor="@color/sobot_color_bottom_message"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/sobot_tv_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/sobot_chat_bottom_selector"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/sobot_bottombar_message"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="@string/sobot_str_bottom_message"
+            android:textColor="@color/sobot_color_bottom_message"
+            android:textSize="16sp" />
+
+        <com.sobot.chat.widget.gif.GifView
+            android:id="@+id/sobot_image_reloading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:visibility="gone" />
+    </LinearLayout>
+    <!-- 按住说话  end -->
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/status_bar" />
+
+    <include
+        android:id="@+id/notloginview"
+        android:visibility="gone"
+        layout="@layout/warn_user_login" />
+
+    <LinearLayout
+        android:id="@+id/userdream_lay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y26"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/user_all_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="onClick"
+            android:text="@string/dream_all"
+            android:textColor="@color/background"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/user_going_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="onClick"
+            android:text="@string/dream_ing"
+            android:textColor="@color/index_btn"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/user_finish_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="onClick"
+            android:text="@string/dream_finish"
+            android:textColor="@color/index_btn"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <include layout="@layout/line_h" />
+
+    <com.zozmom.cuview.CuViewPager
+        android:id="@+id/userdream_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>

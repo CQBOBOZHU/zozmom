@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/status_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/newuser_hong1" />
+
+        <EditText
+            android:id="@+id/newuser_phone"
+            android:layout_width="@dimen/x250"
+            android:layout_height="@dimen/y25"
+            android:layout_marginTop="@dimen/y10"
+            android:background="@drawable/box1"
+            android:gravity="center_vertical"
+            android:hint="@string/phonehint"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingLeft="@dimen/x5"
+            android:singleLine="true"
+            android:textColor="@color/login_edittext_color"
+            android:textColorHint="@color/index_textvoice"
+            android:textSize="@dimen/sizefour" >
+        </EditText>
+
+        <Button
+            android:id="@+id/newuser_gethongbao"
+            android:layout_width="@dimen/x250"
+            android:layout_height="@dimen/y25"
+            android:layout_marginTop="@dimen/y5"
+            android:background="@drawable/yellow_box"
+            android:gravity="center"
+            android:text="领取红包"
+            android:textColor="@color/red_hongbao"
+            android:textSize="@dimen/sizefour" />
+    </LinearLayout>
+
+</LinearLayout>

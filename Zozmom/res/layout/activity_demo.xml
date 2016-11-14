@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <HorizontalScrollView
+                android:id="@+id/sobot_scrollview"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/sobot_relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/sobot_uname"
+            android:hint="用户昵称"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/sobot_nikename"
+            android:hint="用户名"
+            android:layout_toRightOf="@+id/sobot_uname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/sobot_phone"
+            android:layout_toRightOf="@+id/sobot_nikename"
+            android:hint="用户电话"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/sobot_email"
+            android:hint="邮箱"
+            android:layout_toRightOf="@+id/sobot_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/sobot_face"
+            android:layout_below="@+id/sobot_uname"
+            android:hint="自定义头像"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/sobot_qq"
+            android:hint="QQ"
+            android:layout_below="@+id/sobot_uname"
+            android:layout_toRightOf="@+id/sobot_face"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/sobot_weixin"
+            android:hint="微信"
+            android:layout_below="@+id/sobot_uname"
+            android:layout_toRightOf="@+id/sobot_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/sobot_weibo"
+            android:hint="微博"
+            android:layout_below="@+id/sobot_uname"
+            android:layout_toRightOf="@+id/sobot_weixin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/sobot_sex"
+            android:hint="性别(0或1)"
+            android:layout_below="@+id/sobot_uname"
+            android:layout_toRightOf="@+id/sobot_weibo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/sobot_birthday"
+            android:hint="生日"
+            android:layout_below="@+id/sobot_face"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/sobot_remark"
+            android:layout_below="@+id/sobot_face"
+            android:layout_toRightOf="@+id/sobot_birthday"
+            android:hint="备注"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/sobot_visitTitle"
+            android:hint="对话页标题"
+            android:layout_below="@+id/sobot_face"
+            android:layout_toRightOf="@+id/sobot_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/sobot_visitUrl"
+            android:hint="接入来源页的url"
+            android:layout_below="@+id/sobot_face"
+            android:layout_toRightOf="@+id/sobot_visitTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/sobot_skillSetId"
+            android:hint="技能组编号"
+            android:layout_below="@+id/sobot_birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/sobot_skillSetName"
+            android:hint="技能组名称"
+            android:layout_below="@+id/sobot_birthday"
+            android:layout_toRightOf="@+id/sobot_skillSetId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/sobot_zhuanrengongNum"
+            android:hint="几次显示转人工按钮(大于1的数字)"
+            android:layout_below="@+id/sobot_birthday"
+            android:layout_toRightOf="@+id/sobot_skillSetName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+            </HorizontalScrollView>
+    <RelativeLayout
+        android:layout_below="@+id/sobot_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/sobot_startImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/sobot_logo"
+            android:contentDescription="@null">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/sobot_sysNumLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sobot_startImg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/sobot_please"/>
+
+        <EditText
+            android:id="@+id/sobot_sysNum"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sobot_sysNumLable"
+            android:inputType="text"
+            android:text="@string/sobot_value"
+            android:visibility="visible"/>
+
+        <EditText
+            android:id="@+id/sobot_sysNum1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sobot_sysNum"
+            android:hint="请输入partnerId"
+            android:inputType="text"
+            android:visibility="visible"/>
+
+        <CheckBox
+            android:id="@+id/isKeepSession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sobot_sysNum1"
+            android:text="是否保持会话"/>
+
+        <CheckBox
+            android:id="@+id/isShowSatisfaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sobot_sysNum1"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/isKeepSession"
+            android:text="是否弹出满意度评价"/>
+
+        <CheckBox
+            android:id="@+id/isArtificialIntelligence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/isShowSatisfaction"
+            android:text="是否智能转人工"
+            android:checked="false"/>
+
+        <CheckBox
+            android:id="@+id/isUseVoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/isShowSatisfaction"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/isArtificialIntelligence"
+            android:checked="false" android:text="是否使用语音功能"/>
+        <TextView android:id="@+id/tv_initModeType_title" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/isArtificialIntelligence" android:text="客服模式控制:"/>
+
+        <HorizontalScrollView android:id="@+id/hsv_initmodetype"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_below="@+id/tv_initModeType_title">
+
+            <RadioGroup android:id="@+id/rg_initModeType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                <RadioButton android:id="@+id/rg_initModeType_noSet"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content" android:checked="true"
+                             android:text="不设置"/>
+                <RadioButton android:id="@+id/rg_initModeType_only_robot"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content" android:text="仅机器"/>
+                <RadioButton android:id="@+id/rg_initModeType_only_customer"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content" android:text="仅人工"/>
+                <RadioButton android:id="@+id/rg_initModeType_robot_first"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content" android:text="机器优先"/>
+                <RadioButton android:id="@+id/rg_initModeType_custom_first"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content" android:text="人工优先"/>
+            </RadioGroup>
+        </HorizontalScrollView>
+
+        <Button
+            android:id="@+id/sobot_btnStart"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hsv_initmodetype"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/sobot_btn_start"/>
+
+        <TextView
+            android:id="@+id/unread_msg_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/sobot_btnStart"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/message_bubble_1"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

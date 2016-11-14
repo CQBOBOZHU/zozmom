@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/item_selector"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y31"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/cmm_typeView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="提现"
+                android:textColor="@color/me_textcolor"
+                android:textSize="@dimen/sizefour" />
+
+            <TextView
+                android:id="@+id/cmm_pay_hintview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x12"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="ID521消费100元"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizetwo"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:gravity="right|center_vertical"
+                    android:text="￥"
+                    android:paddingRight="@dimen/x9"
+                    android:textColor="@color/me_textcolor"
+                    android:textSize="@dimen/sizetwo" />
+                
+                <TextView
+                    android:id="@+id/cmm_money_view"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="+100"
+                    android:textColor="@color/background"
+                    android:textSize="@dimen/sizetwo" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/cmm_tiem_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:lines="1"
+                android:paddingRight="@dimen/x12"
+                android:text="2016年06月04日 16:45"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizetwo" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y28"
+        android:background="@color/white"
+        android:splitMotionEvents="false" >
+
+        <ImageButton
+            android:id="@+id/status_bar_Exit"
+            android:layout_width="@dimen/x35"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:src="@drawable/back_black" />
+
+        <TextView
+            android:id="@+id/status_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="个人资料"
+            android:textColor="@color/title_black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_h" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y42" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:text="头像"
+                    android:textColor="@color/login_edittext_color"
+                    android:textSize="@dimen/sizefour" />
+
+                <com.zozmom.cuview.CircleImageView
+                    android:id="@+id/usermanage__face_imageview"
+                    android:layout_width="@dimen/x49"
+                    android:layout_height="@dimen/x49"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x30"
+                    android:onClick="onClick"
+                    android:src="@drawable/deimage" />
+
+                <ImageView
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x10"
+                    android:background="@null"
+                    android:src="@drawable/forward" />
+            </RelativeLayout>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y42" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:text="用户ID"
+                    android:textColor="@color/login_edittext_color"
+                    android:textSize="@dimen/sizefour" />
+
+                <TextView
+                    android:id="@+id/usermanage_idtextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x30"
+                    android:textColor="@color/background"
+                    android:textSize="@dimen/sizefour" />
+            </RelativeLayout>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y42" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:text="邀请码"
+                    android:textColor="@color/login_edittext_color"
+                    android:textSize="@dimen/sizefour" />
+
+                <TextView
+                    android:id="@+id/usermanager_ivcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x30"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizefour" />
+            </RelativeLayout>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y42" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:text="手机号码"
+                    android:textColor="@color/login_edittext_color"
+                    android:textSize="@dimen/sizefour" />
+
+                <TextView
+                    android:id="@+id/usermanager_phonetextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x30"
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizefour" />
+            </RelativeLayout>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:id="@+id/alter_usernameview"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y42"
+                android:background="@drawable/item_selector"
+                android:onClick="onClick" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:text="昵称"
+                    android:textColor="@color/login_edittext_color"
+                    android:textSize="@dimen/sizefour" />
+
+                <TextView
+                    android:id="@+id/usermanager_nameview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x30"
+                    android:gravity=""
+                    android:textColor="@color/good_message_textcolors"
+                    android:textSize="@dimen/sizefour" />
+
+                <ImageView
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x10"
+                    android:background="@null"
+                    android:src="@drawable/forward" />
+            </RelativeLayout>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:id="@+id/alterpwd_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y42"
+                 android:background="@drawable/item_selector"
+                android:onClick="onClick" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:text="修改密码"
+                    android:textColor="@color/login_edittext_color"
+                    android:textSize="@dimen/sizefour" />
+
+                <ImageView
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x10"
+                    android:background="@null"
+                    android:src="@drawable/forward" />
+            </RelativeLayout>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                layout="@layout/line_h" />
+
+            <RelativeLayout
+                android:id="@+id/address_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y42"
+                 android:background="@drawable/item_selector"
+                android:onClick="onClick" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:text="地址管理"
+                    android:textColor="@color/login_edittext_color"
+                    android:textSize="@dimen/sizefour" />
+
+                <ImageView
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x10"
+                    android:background="@null"
+                    android:src="@drawable/forward" />
+            </RelativeLayout>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                layout="@layout/line_h" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

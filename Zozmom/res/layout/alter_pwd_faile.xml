@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="@dimen/x223"
+        android:layout_height="@dimen/y91"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y14"
+            android:gravity="center_horizontal"
+            android:text="密码错误"
+            android:textColor="@color/index_btn"
+            android:textSize="@dimen/sizesix" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y9"
+            android:gravity="center_horizontal"
+            android:text="想不起来?通过手机修改!"
+            android:textColor="@color/good_message_textcolors"
+            android:textSize="@dimen/sizefour" />
+
+        <Button
+            android:id="@+id/alter_fail_btn"
+            android:layout_width="@dimen/x116"
+            android:layout_height="@dimen/y19"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/y9"
+            android:background="@drawable/btn_background_yellow"
+            android:gravity="center"
+            android:text="忘记密码"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sizefour" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/net_failure_lay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     android:onClick="onClick"
+    android:gravity="center" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/net" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="#999999"
+        android:text="网络没有连接，请设置好网络" />
+	<Button
+	    android:id="@+id/refresh_btn"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/btnground"
+	    android:layout_marginTop="20dp"
+	    android:textColor="#999999"
+	    android:onClick="onClick"
+	    android:text="点击界面刷新"
+	    />
+</LinearLayout>

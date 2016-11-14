@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pay_lay" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="@dimen/x223"
+            android:layout_height="@dimen/y91"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/y27"
+            android:background="@color/white" >
+
+            <TextView
+                android:id="@+id/warn_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/y19"
+                android:gravity="center"
+                android:text="T^T确认要放弃支付吗?\n梦想就在眼前哦!"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizesix" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y19"
+                android:layout_below="@+id/warn_textview"
+                android:layout_marginTop="@dimen/y10"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/pay_btnsure"
+                    android:layout_width="@dimen/x73"
+                    android:layout_height="@dimen/y19"
+                    android:layout_marginRight="@dimen/x20"
+                    android:background="@drawable/btn_background_yellow"
+                    android:gravity="center"
+                    android:onClick="giveup"
+                    android:text="确定"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sizefour" />
+
+                <Button
+                    android:id="@+id/pay_btnexit"
+                    android:layout_width="@dimen/x73"
+                    android:layout_height="@dimen/y19"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:background="@drawable/btn_background_d7"
+                    android:gravity="center"
+                    android:onClick="notgiveup"
+                    android:text="取消"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sizefour" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/relativeLayout1"
+            android:layout_marginLeft="@dimen/x9"
+            android:layout_marginTop="@dimen/y17"
+            android:src="@drawable/warn" />
+    </RelativeLayout>
+
+</LinearLayout>

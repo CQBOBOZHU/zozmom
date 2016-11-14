@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/status_bar" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/cmm_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/cmm_textview"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x23"
+                android:background="@color/white"
+                android:paddingTop="@dimen/y2"
+                android:paddingLeft="@dimen/x12"
+                android:text="共0件商品"
+                android:textColor="@color/good_message_textcolors"
+                android:textSize="@dimen/sizethree" />
+
+            <include layout="@layout/line_h" />
+
+            <com.zozmom.cuview.CuListView
+                android:id="@+id/cmm_culistview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true" >
+            </com.zozmom.cuview.CuListView>
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+</LinearLayout>

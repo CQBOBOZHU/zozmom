@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+     android:splitMotionEvents="false"
+    android:orientation="vertical" >
+
+    <include layout="@layout/stat_bar_white" />
+
+    <include layout="@layout/line_h" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:splitMotionEvents="false"
+            android:orientation="vertical" >
+
+            <com.zozmom.cuview.CuListView
+                android:id="@+id/address_listview"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:divider="@color/activity_bg"
+                android:dividerHeight="@dimen/y8"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:scrollbars="none" />
+
+            <RelativeLayout
+                android:id="@+id/add_ad_view"
+                android:layout_width="@dimen/x297"
+                android:layout_height="@dimen/y31"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/y10"
+                android:background="@drawable/btn_background_yellow"
+                android:gravity="center_horizontal"
+                android:onClick="onClick" >
+
+                <TextView
+                    android:id="@+id/address_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/add_address"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/y11" />
+
+                <ImageView
+                    android:id="@+id/address_addicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x7"
+                    android:layout_toLeftOf="@+id/address_text"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/add_circle" />
+            </RelativeLayout>
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_selector"
+    android:paddingBottom="@dimen/y8"
+    android:paddingTop="@dimen/y8" >
+
+    <TextView
+        android:id="@+id/address_item_nameview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x12"
+        android:text="周星星"
+        android:textColor="@color/good_message_textcolors"
+        android:textSize="@dimen/sizefour" />
+
+    <TextView
+        android:id="@+id/address_item_phoneview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/x12"
+        android:text="15803006150"
+        android:textColor="@color/good_message_textcolors"
+        android:textSize="@dimen/sizefour" />
+
+    <TextView
+        android:id="@+id/address_item_messageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/address_item_nameview"
+        android:layout_marginLeft="@dimen/x12"
+        android:layout_marginRight="@dimen/x12"
+        android:layout_marginTop="@dimen/y8"
+        android:gravity="top|left"
+        android:lineSpacingExtra="@dimen/y3"
+        android:maxLines="2"
+        android:text="北京天安门广场1150号17栋5单元"
+        android:textColor="@color/good_message_textcolors"
+        android:textSize="@dimen/sizefour" />
+
+</RelativeLayout>

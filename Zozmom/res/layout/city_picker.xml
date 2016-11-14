@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:su="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="horizontal" >
+
+    <com.zozmom.cuview.ScrollerNumberPicker
+        android:id="@+id/province"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        su:itemNumber="3"
+        su:lineColor="@color/activity_bg"
+        su:maskHight="32dp"
+        su:noEmpty="true"
+        su:normalTextColor="@color/before_btncolor"
+        su:normalTextSize="@dimen/sizefour"
+        su:selecredTextColor="@color/background"
+        su:selecredTextSize="@dimen/sizesix"
+        su:unitHight="50dp" />
+
+    <com.zozmom.cuview.ScrollerNumberPicker
+        android:id="@+id/city"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        su:itemNumber="3"
+        su:lineColor="@color/activity_bg"
+        su:maskHight="32dp"
+        su:noEmpty="true"
+        su:normalTextColor="@color/before_btncolor"
+        su:normalTextSize="@dimen/sizefour"
+        su:selecredTextColor="@color/background"
+        su:selecredTextSize="@dimen/sizesix"
+        su:unitHight="50dp" />
+
+    <com.zozmom.cuview.ScrollerNumberPicker
+        android:id="@+id/couny"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        su:itemNumber="3"
+        su:lineColor="@color/activity_bg"
+        su:maskHight="32dp"
+        su:noEmpty="true"
+        su:normalTextColor="@color/before_btncolor"
+        su:normalTextSize="@dimen/sizefour"
+        su:selecredTextColor="@color/background"
+        su:selecredTextSize="@dimen/sizesix"
+        su:unitHight="50dp" />
+
+</LinearLayout>
